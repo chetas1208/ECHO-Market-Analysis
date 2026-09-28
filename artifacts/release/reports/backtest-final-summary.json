@@ -1,0 +1,16 @@
+{
+  "run_id": "0e4a33a922f147aefc17",
+  "mode": "HISTORICAL_REPLAY",
+  "dataset": "fixture_validation",
+  "status": "INSUFFICIENT_DATA",
+  "trades": 18,
+  "total_return": 0.012902518188428136,
+  "max_drawdown": 0.0021815465195299476,
+  "hit_rate": 0.8333333333333334,
+  "profit_factor": 3.0542058712667557,
+  "sharpe": null,
+  "sortino": null,
+  "annualized_return": null,
+  "calmar": null,
+  "claim_boundary": "synthetic contract evidence; not a live or final-holdout performance claim"
+}

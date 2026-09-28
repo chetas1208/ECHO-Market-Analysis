@@ -1,0 +1,66 @@
+{
+  "api": {
+    "max": 1.9129,
+    "min": 0.3315,
+    "p50": 0.3479,
+    "p95": 0.3808,
+    "samples": 100,
+    "scope": "ASGI liveness endpoint, no database or provider",
+    "status": "MEASURED",
+    "unit": "ms"
+  },
+  "forecast": {
+    "artifact_sha256": "e1065d87087263b43e7638fe71a86dbf97da00ea99e45e79927a258ba409efcf",
+    "chronos": "UNAVAILABLE",
+    "max": 0.4412,
+    "min": 0.2474,
+    "p50": 0.2544,
+    "p95": 0.279,
+    "samples": 100,
+    "scope": "registered linear fallback forecast inference, no Chronos",
+    "status": "MEASURED",
+    "unit": "ms"
+  },
+  "graph": {
+    "max": 48.1056,
+    "min": 0.0289,
+    "p50": 0.0308,
+    "p95": 0.0403,
+    "samples": 250,
+    "scope": "pure ShockGraph propagation, 105 nodes/85 edges",
+    "status": "MEASURED",
+    "unit": "ms"
+  },
+  "hardware_scope": "local shared development machine; replay-only deterministic paths",
+  "ingestion": {
+    "max": 1.4072,
+    "min": 0.9584,
+    "p50": 1.0085,
+    "p95": 1.0356,
+    "samples": 250,
+    "scope": "pure world normalization, no database",
+    "status": "MEASURED",
+    "throughput_per_second": 996.79,
+    "unit": "ms"
+  },
+  "memory": {
+    "chronos": "NOT_LOADED",
+    "modernfinbert": "NOT_LOADED",
+    "process_peak_rss_kb": 118208,
+    "process_peak_rss_mb": 115.44,
+    "scope": "benchmark process without optional model groups",
+    "status": "MEASURED"
+  },
+  "recorded_at": "2026-09-21T01:24:41.430195+00:00",
+  "stream": {
+    "dropped": 4936,
+    "elapsed_ms": 23.9595,
+    "overflow_policy": "drop_oldest",
+    "queue_capacity": 64,
+    "queue_depth": 64,
+    "samples": 5000,
+    "scope": "bounded market pipeline enqueue seam; no provider or database",
+    "status": "MEASURED",
+    "throughput_per_second": 208685.5
+  }
+}

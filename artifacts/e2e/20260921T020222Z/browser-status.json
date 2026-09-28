@@ -1,0 +1,5 @@
+{
+  "status": "NOT_RUN",
+  "reason": "Chromium headless shell failed to load libasound.so.2",
+  "substitute_evidence": "HTTP GET against Next.js routes /, /events, /graph, /forecasts, /strategy, /ops: all passed"
+}

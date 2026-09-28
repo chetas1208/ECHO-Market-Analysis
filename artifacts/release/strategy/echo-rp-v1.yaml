@@ -1,0 +1,6 @@
+strategy_version: echo-rp-v1
+config_source: configs/strategies/echo-rp-v1.yaml
+config_hash: 128191d8304211045b29cb8b7dde187286242428f0e68b5e1e99efe9b06b5602
+mode: HISTORICAL_REPLAY
+selection_status: NOT_SELECTED
+note: A final holdout selection is intentionally not claimed until a defensible historical event archive is available.

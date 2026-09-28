@@ -1,0 +1,2104 @@
+[
+  {
+    "path": "/api/v1/health",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "status": "ok"
+    }
+  },
+  {
+    "path": "/api/v1/ready",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "status": "ready",
+      "checks": {
+        "database": "ok"
+      }
+    }
+  },
+  {
+    "path": "/api/v1/system/config-status",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "mode": "replay",
+      "database": {
+        "provider": "local",
+        "configured": true,
+        "ssl_mode": "prefer"
+      },
+      "graph": {
+        "requested": "networkx",
+        "active": "networkx",
+        "fallback": "networkx",
+        "state": "READY",
+        "reason": "configured"
+      },
+      "market": {
+        "provider": "replay",
+        "configured": true,
+        "state": "CONFIGURED"
+      },
+      "world": {
+        "provider": "replay",
+        "mcp_enabled": false,
+        "transport": "streamable_http",
+        "configured": true,
+        "state": "CONFIGURED"
+      },
+      "execution": {
+        "mode": "REPLAY",
+        "configured": false,
+        "paper_only": true,
+        "state": "CONFIGURED"
+      },
+      "optional": {
+        "jev_enabled": false,
+        "massive_repo_configured": false,
+        "worldmonitor_repo_configured": false,
+        "alpaca_mcp_enabled": false
+      }
+    }
+  },
+  {
+    "path": "/api/v1/ops/status",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "status": "HEALTHY",
+      "checked_at": "2026-09-21T02:02:22.477718Z",
+      "dependencies": {
+        "database": {
+          "state": "HEALTHY",
+          "status": "connected",
+          "detail": "PostgreSQL ping succeeded"
+        },
+        "graph": {
+          "state": "HEALTHY",
+          "status": "available",
+          "detail": "graph snapshots are database-backed"
+        },
+        "forecast": {
+          "state": "HEALTHY",
+          "status": "available",
+          "detail": "registered forecast artifact present"
+        },
+        "market": {
+          "state": "HEALTHY",
+          "status": "connected",
+          "detail": "replay:connected"
+        },
+        "world": {
+          "state": "HEALTHY",
+          "status": "deterministic replay provider",
+          "detail": "deterministic replay provider"
+        },
+        "broker": {
+          "state": "HEALTHY",
+          "status": "connected",
+          "detail": "replay provider ready"
+        },
+        "execution": {
+          "state": "HEALTHY",
+          "status": "connected",
+          "detail": "replay provider ready"
+        }
+      },
+      "liveness": "ok"
+    }
+  },
+  {
+    "path": "/api/v1/market/status",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "mode": "REPLAY",
+      "providers": [
+        {
+          "provider": "replay",
+          "state": "CONNECTED",
+          "configured": true,
+          "mode": "REPLAY",
+          "last_message_at": "2026-09-16T19:59:00Z",
+          "last_error": null,
+          "reconnect_attempts": 0,
+          "subscribed_symbols": [
+            "AAL",
+            "AAPL",
+            "AMD",
+            "AMZN",
+            "AVGO",
+            "BAC",
+            "COP",
+            "CRWD",
+            "CVX",
+            "DAL",
+            "GOOGL",
+            "GS",
+            "INTC",
+            "JPM",
+            "LMT",
+            "LNG",
+            "LUV",
+            "META",
+            "MSFT",
+            "MU",
+            "NOC",
+            "NVDA",
+            "PANW",
+            "QCOM",
+            "QQQ",
+            "RTX",
+            "SLB",
+            "SOXX",
+            "SPY",
+            "TSM",
+            "UAL",
+            "XLE",
+            "XLF",
+            "XLI",
+            "XOM"
+          ],
+          "messages_received": 10920,
+          "malformed_messages": 0
+        }
+      ],
+      "active_provider": "replay",
+      "subscribed_symbols": [
+        "AAL",
+        "AAPL",
+        "AMD",
+        "AMZN",
+        "AVGO",
+        "BAC",
+        "COP",
+        "CRWD",
+        "CVX",
+        "DAL",
+        "GOOGL",
+        "GS",
+        "INTC",
+        "JPM",
+        "LMT",
+        "LNG",
+        "LUV",
+        "META",
+        "MSFT",
+        "MU",
+        "NOC",
+        "NVDA",
+        "PANW",
+        "QCOM",
+        "QQQ",
+        "RTX",
+        "SLB",
+        "SOXX",
+        "SPY",
+        "TSM",
+        "UAL",
+        "XLE",
+        "XLF",
+        "XLI",
+        "XOM"
+      ],
+      "last_observation_at": "2026-09-16T16:57:00Z",
+      "queue": {
+        "depth": 729,
+        "capacity": 5000,
+        "dropped": 0
+      },
+      "replay_finished": false,
+      "session": "CLOSED"
+    }
+  },
+  {
+    "path": "/api/v1/market/symbols",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "items": [
+        {
+          "symbol": "NVDA",
+          "group": "semiconductors",
+          "role": "equity",
+          "sector_benchmark": "SOXX",
+          "price": 169.602134431737,
+          "change_pct": -4.394471818535262,
+          "as_of": "2026-09-16T16:57:00Z",
+          "state": "NORMAL",
+          "shock_score": 0.042077308071356075,
+          "volume_z": -0.26545325196921127,
+          "return_5m": -0.002508727271318706,
+          "sector_residual": -0.0015238782420100943,
+          "direction": "negative"
+        },
+        {
+          "symbol": "AMD",
+          "group": "semiconductors",
+          "role": "equity",
+          "sector_benchmark": "SOXX",
+          "price": 161.17444387880238,
+          "change_pct": 0.8334348657121016,
+          "as_of": "2026-09-16T16:57:00Z",
+          "state": "NORMAL",
+          "shock_score": 0.07812821625196033,
+          "volume_z": -1.0430281462276494,
+          "return_5m": -0.000997514974255049,
+          "sector_residual": 0.00015792865593483888,
+          "direction": "positive"
+        },
+        {
+          "symbol": "AVGO",
+          "group": "semiconductors",
+          "role": "equity",
+          "sector_benchmark": "SOXX",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "TSM",
+          "group": "semiconductors",
+          "role": "equity",
+          "sector_benchmark": "SOXX",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "INTC",
+          "group": "semiconductors",
+          "role": "equity",
+          "sector_benchmark": "SOXX",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "QCOM",
+          "group": "semiconductors",
+          "role": "equity",
+          "sector_benchmark": "SOXX",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "MU",
+          "group": "semiconductors",
+          "role": "equity",
+          "sector_benchmark": "SOXX",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "MSFT",
+          "group": "technology",
+          "role": "equity",
+          "sector_benchmark": "QQQ",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "AMZN",
+          "group": "technology",
+          "role": "equity",
+          "sector_benchmark": "QQQ",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "GOOGL",
+          "group": "technology",
+          "role": "equity",
+          "sector_benchmark": "QQQ",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "META",
+          "group": "technology",
+          "role": "equity",
+          "sector_benchmark": "QQQ",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "AAPL",
+          "group": "technology",
+          "role": "equity",
+          "sector_benchmark": "QQQ",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "XOM",
+          "group": "energy",
+          "role": "equity",
+          "sector_benchmark": "XLE",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "CVX",
+          "group": "energy",
+          "role": "equity",
+          "sector_benchmark": "XLE",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "COP",
+          "group": "energy",
+          "role": "equity",
+          "sector_benchmark": "XLE",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "SLB",
+          "group": "energy",
+          "role": "equity",
+          "sector_benchmark": "XLE",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "LNG",
+          "group": "energy",
+          "role": "equity",
+          "sector_benchmark": "XLE",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "DAL",
+          "group": "airlines",
+          "role": "equity",
+          "sector_benchmark": "XLI",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "UAL",
+          "group": "airlines",
+          "role": "equity",
+          "sector_benchmark": "XLI",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "AAL",
+          "group": "airlines",
+          "role": "equity",
+          "sector_benchmark": "XLI",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "LUV",
+          "group": "airlines",
+          "role": "equity",
+          "sector_benchmark": "XLI",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "LMT",
+          "group": "defense",
+          "role": "equity",
+          "sector_benchmark": "XLI",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "RTX",
+          "group": "defense",
+          "role": "equity",
+          "sector_benchmark": "XLI",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "NOC",
+          "group": "defense",
+          "role": "equity",
+          "sector_benchmark": "XLI",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "CRWD",
+          "group": "cybersecurity",
+          "role": "equity",
+          "sector_benchmark": "QQQ",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "PANW",
+          "group": "cybersecurity",
+          "role": "equity",
+          "sector_benchmark": "QQQ",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "JPM",
+          "group": "financials",
+          "role": "equity",
+          "sector_benchmark": "XLF",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "BAC",
+          "group": "financials",
+          "role": "equity",
+          "sector_benchmark": "XLF",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "GS",
+          "group": "financials",
+          "role": "equity",
+          "sector_benchmark": "XLF",
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "SPY",
+          "group": "benchmark",
+          "role": "benchmark",
+          "sector_benchmark": null,
+          "price": 649.133583339979,
+          "change_pct": 0.733249115572332,
+          "as_of": "2026-09-16T16:57:00Z",
+          "state": "NORMAL",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "QQQ",
+          "group": "benchmark",
+          "role": "benchmark",
+          "sector_benchmark": null,
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "SOXX",
+          "group": "benchmark",
+          "role": "benchmark",
+          "sector_benchmark": null,
+          "price": 295.0833247806283,
+          "change_pct": 0.6480272049857794,
+          "as_of": "2026-09-16T16:57:00Z",
+          "state": "NORMAL",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "XLE",
+          "group": "benchmark",
+          "role": "benchmark",
+          "sector_benchmark": null,
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "XLF",
+          "group": "benchmark",
+          "role": "benchmark",
+          "sector_benchmark": null,
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        },
+        {
+          "symbol": "XLI",
+          "group": "benchmark",
+          "role": "benchmark",
+          "sector_benchmark": null,
+          "price": null,
+          "change_pct": null,
+          "as_of": null,
+          "state": "NO_DATA",
+          "shock_score": null,
+          "volume_z": null,
+          "return_5m": null,
+          "sector_residual": null,
+          "direction": null
+        }
+      ]
+    }
+  },
+  {
+    "path": "/api/v1/world/status",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "mode": "REPLAY",
+      "provider": {
+        "provider": "replay",
+        "configured": true,
+        "state": "REPLAY",
+        "mode": "REPLAY",
+        "last_success_at": "2026-09-17T16:00:00Z",
+        "last_event_at": "2026-09-17T16:00:00Z",
+        "events_received": 6,
+        "malformed_events": 0,
+        "last_error": null,
+        "poll_interval_s": null,
+        "retry_after_until": null
+      },
+      "counters": {
+        "received": 6,
+        "created": 0,
+        "merged": 0,
+        "duplicates": 6,
+        "rejected": 0,
+        "last_event_at": "2026-09-17T16:00:00Z"
+      },
+      "text_analyzer": "DISABLED"
+    }
+  },
+  {
+    "path": "/api/v1/events?limit=20&offset=0",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "items": [
+        {
+          "id": "evt_mock_hormuz_naval_001",
+          "timestamp": "2026-09-20T17:00:00Z",
+          "source_type": "world",
+          "event_type": "geopolitical_shipping_disruption",
+          "title": "Strait of Hormuz \u2014 Increased Naval Activity",
+          "summary": "MOCK FIXTURE: Elevated naval deployments reported near the Strait of Hormuz, raising the risk of disruption to crude oil and LNG tanker traffic.",
+          "entities": [
+            "Strait of Hormuz"
+          ],
+          "companies": [],
+          "locations": [
+            "Middle East"
+          ],
+          "economic_channels": {
+            "oil_supply": -0.82,
+            "global_trade": -0.61,
+            "energy_prices": 0.73,
+            "shipping_costs": 0.77
+          },
+          "severity": 0.88,
+          "novelty": 0.74,
+          "corroboration": 0.91,
+          "confidence": 0.91,
+          "source_refs": [
+            {
+              "url": null,
+              "name": "World Monitor (mock fixture)"
+            }
+          ],
+          "metadata": {
+            "note": "Synthetic Day 1 fixture; not derived from a live feed.",
+            "fixture": "mock"
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T00:51:34.012671Z",
+          "ingested_at": "2026-09-21T00:51:34.012671Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 1,
+          "independent_source_count": 1
+        },
+        {
+          "id": "evt_world_80d9d6681c32094a15f045c020f8f988a65d1cbe",
+          "timestamp": "2026-09-17T16:00:00Z",
+          "source_type": "world",
+          "event_type": "sanction",
+          "title": "European Union imposes new export sanctions on Belarus potash sector",
+          "summary": "The European Union announced a new round of sanctions restricting exports and financing tied to Belarus's potash sector, citing geopolitical tensions. Compliance teams are reviewing exposure. (Synthetic replay data.)",
+          "entities": [
+            "European Union",
+            "Belarus",
+            "potash",
+            "Eastern Europe"
+          ],
+          "companies": [],
+          "locations": [
+            "Belarus",
+            "Eastern Europe"
+          ],
+          "economic_channels": {
+            "global_trade": -0.15,
+            "regulatory_risk": 0.25,
+            "geopolitical_risk": 0.25
+          },
+          "severity": 0.51,
+          "novelty": 1.0,
+          "corroboration": 0.4933464022844187,
+          "confidence": 0.784337,
+          "source_refs": [
+            {
+              "headline": "European Union imposes new export sanctions on Belarus potash sector",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.8,
+              "source_name": "Replay Wire A",
+              "published_at": "2026-09-17T16:04:00Z",
+              "retrieved_at": "2026-09-17T16:06:00Z",
+              "source_group": "replay_wire_a",
+              "syndicated_from": null,
+              "source_identifier": "rwa-sanction-001"
+            }
+          ],
+          "metadata": {
+            "provider": "replay",
+            "is_replay": true,
+            "fingerprint": "80d9d6681c32094a15f045c020f8f988a65d1cbe",
+            "matched_terms": [
+              "category:sanctions",
+              "sanctions"
+            ],
+            "normalized_at": "2026-09-21T00:53:05.910087+00:00",
+            "text_sentiment": null,
+            "score_semantics": "severity/novelty/corroboration/confidence are heuristic scores in [0,1], not probabilities; economic channels are directional pressure in [-1,1], not expected price moves",
+            "channel_evidence": {
+              "global_trade": [
+                "class:sanction"
+              ],
+              "regulatory_risk": [
+                "class:sanction"
+              ],
+              "geopolitical_risk": [
+                "class:sanction"
+              ]
+            },
+            "score_components": {
+              "novelty": {
+                "considered": 0,
+                "history_size": 0,
+                "nearest_index": null,
+                "nearest_similarity": 0.0
+              },
+              "severity": {
+                "severity": 0.51,
+                "pre_blend": 0.5,
+                "class_base": 0.5,
+                "magnitude_key": null,
+                "geo_scope_bonus": 0.0,
+                "magnitude_bonus": 0.0,
+                "magnitude_score": 0.0,
+                "geo_scope_reason": null,
+                "provider_importance": 0.6,
+                "infrastructure_bonus": 0.0,
+                "infrastructure_entities": [],
+                "provider_importance_weight": 0.1
+              },
+              "confidence": {
+                "raw": 0.784337,
+                "note": "interpretation confidence: heuristic score, not a calibrated probability",
+                "capped": false,
+                "weights": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.25,
+                  "source_reliability": 0.1,
+                  "classification_certainty": 0.3
+                },
+                "has_text": true,
+                "contributions": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.123337,
+                  "source_reliability": 0.08,
+                  "classification_certainty": 0.231
+                },
+                "defaulted_inputs": [],
+                "completeness_factor": 1.0
+              },
+              "corroboration": {
+                "base": 0.5034146962085905,
+                "diversity": 1.0,
+                "distinct_groups": 1,
+                "reliability_mean": 0.8,
+                "syndicated_count": 0,
+                "independent_count": 1
+              }
+            },
+            "provider_event_id": "replay-sanction-001",
+            "severity_components": {
+              "severity": 0.51,
+              "pre_blend": 0.5,
+              "class_base": 0.5,
+              "magnitude_key": null,
+              "geo_scope_bonus": 0.0,
+              "magnitude_bonus": 0.0,
+              "magnitude_score": 0.0,
+              "geo_scope_reason": null,
+              "provider_importance": 0.6,
+              "infrastructure_bonus": 0.0,
+              "infrastructure_entities": [],
+              "provider_importance_weight": 0.1
+            },
+            "confidence_components": {
+              "raw": 0.784337,
+              "note": "interpretation confidence: heuristic score, not a calibrated probability",
+              "capped": false,
+              "weights": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.25,
+                "source_reliability": 0.1,
+                "classification_certainty": 0.3
+              },
+              "has_text": true,
+              "contributions": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.123337,
+                "source_reliability": 0.08,
+                "classification_certainty": 0.231
+              },
+              "defaulted_inputs": [],
+              "completeness_factor": 1.0
+            },
+            "classification_certainty": 0.77,
+            "corroboration_components": {
+              "base": 0.5034146962085905,
+              "diversity": 1.0,
+              "distinct_groups": 1,
+              "reliability_mean": 0.8,
+              "syndicated_count": 0,
+              "independent_count": 1
+            }
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T00:53:05.912443Z",
+          "ingested_at": "2026-09-21T00:53:05.910087Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 1,
+          "independent_source_count": 1
+        },
+        {
+          "id": "evt_world_17553bb071db6af919cadb5ec4dae62e6c6cfc2c",
+          "timestamp": "2026-09-17T11:10:00Z",
+          "source_type": "world",
+          "event_type": "cyber_incident",
+          "title": "Ransomware attack knocks out logistics software vendor Meridian Freight Systems",
+          "summary": "Fictional vendor Meridian Freight Systems disclosed a ransomware incident that took its shipment-tracking platform offline. Carriers and shippers relying on the software report manual workarounds. (Synthetic replay data.)",
+          "entities": [
+            "Meridian Freight Systems",
+            "United States",
+            "North America"
+          ],
+          "companies": [],
+          "locations": [
+            "United States",
+            "North America"
+          ],
+          "economic_channels": {
+            "cybersecurity_risk": 0.35,
+            "infrastructure_availability": -0.15
+          },
+          "severity": 0.47000000000000003,
+          "novelty": 1.0,
+          "corroboration": 0.7326844525667877,
+          "confidence": 0.799171,
+          "source_refs": [
+            {
+              "headline": "Ransomware attack knocks out logistics software vendor Meridian Freight Systems",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.7,
+              "source_name": "Replay Tech Bulletin",
+              "published_at": "2026-09-17T11:15:00Z",
+              "retrieved_at": "2026-09-17T11:17:00Z",
+              "source_group": "replay_tech_bulletin",
+              "syndicated_from": null,
+              "source_identifier": "rtb-cyber-001"
+            },
+            {
+              "headline": "Ransomware hits freight software provider; operations disrupted",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.75,
+              "source_name": "Replay Security Desk",
+              "published_at": "2026-09-17T11:19:00Z",
+              "retrieved_at": "2026-09-17T11:22:00Z",
+              "source_group": "replay_security_desk",
+              "syndicated_from": null,
+              "source_identifier": "rsd-cyber-001"
+            }
+          ],
+          "metadata": {
+            "provider": "replay",
+            "is_replay": true,
+            "fingerprint": "17553bb071db6af919cadb5ec4dae62e6c6cfc2c",
+            "matched_terms": [
+              "category:cyber",
+              "category:ransomware",
+              "ransomware"
+            ],
+            "normalized_at": "2026-09-21T00:53:05.896182+00:00",
+            "text_sentiment": null,
+            "score_semantics": "severity/novelty/corroboration/confidence are heuristic scores in [0,1], not probabilities; economic channels are directional pressure in [-1,1], not expected price moves",
+            "channel_evidence": {
+              "cybersecurity_risk": [
+                "class:cyber_incident"
+              ],
+              "infrastructure_availability": [
+                "class:cyber_incident"
+              ]
+            },
+            "score_components": {
+              "novelty": {
+                "considered": 0,
+                "history_size": 0,
+                "nearest_index": null,
+                "nearest_similarity": 0.0
+              },
+              "severity": {
+                "severity": 0.47000000000000003,
+                "pre_blend": 0.45,
+                "class_base": 0.45,
+                "magnitude_key": null,
+                "geo_scope_bonus": 0.0,
+                "magnitude_bonus": 0.0,
+                "magnitude_score": 0.0,
+                "geo_scope_reason": null,
+                "provider_importance": 0.65,
+                "infrastructure_bonus": 0.0,
+                "infrastructure_entities": [],
+                "provider_importance_weight": 0.1
+              },
+              "confidence": {
+                "raw": 0.799171,
+                "note": "interpretation confidence: heuristic score, not a calibrated probability",
+                "capped": false,
+                "weights": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.25,
+                  "source_reliability": 0.1,
+                  "classification_certainty": 0.3
+                },
+                "has_text": true,
+                "contributions": {
+                  "entity_count": 0.1125,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.183171,
+                  "source_reliability": 0.0725,
+                  "classification_certainty": 0.231
+                },
+                "defaulted_inputs": [],
+                "completeness_factor": 1.0
+              },
+              "corroboration": {
+                "base": 0.7534030360583935,
+                "diversity": 1.0,
+                "distinct_groups": 2,
+                "reliability_mean": 0.725,
+                "syndicated_count": 0,
+                "independent_count": 2
+              }
+            },
+            "provider_event_id": "replay-cyber-incident-001",
+            "severity_components": {
+              "severity": 0.47000000000000003,
+              "pre_blend": 0.45,
+              "class_base": 0.45,
+              "magnitude_key": null,
+              "geo_scope_bonus": 0.0,
+              "magnitude_bonus": 0.0,
+              "magnitude_score": 0.0,
+              "geo_scope_reason": null,
+              "provider_importance": 0.65,
+              "infrastructure_bonus": 0.0,
+              "infrastructure_entities": [],
+              "provider_importance_weight": 0.1
+            },
+            "confidence_components": {
+              "raw": 0.799171,
+              "note": "interpretation confidence: heuristic score, not a calibrated probability",
+              "capped": false,
+              "weights": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.25,
+                "source_reliability": 0.1,
+                "classification_certainty": 0.3
+              },
+              "has_text": true,
+              "contributions": {
+                "entity_count": 0.1125,
+                "geo_resolved": 0.2,
+                "corroboration": 0.183171,
+                "source_reliability": 0.0725,
+                "classification_certainty": 0.231
+              },
+              "defaulted_inputs": [],
+              "completeness_factor": 1.0
+            },
+            "classification_certainty": 0.77,
+            "corroboration_components": {
+              "base": 0.7534030360583935,
+              "diversity": 1.0,
+              "distinct_groups": 2,
+              "reliability_mean": 0.725,
+              "syndicated_count": 0,
+              "independent_count": 2
+            }
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T00:53:05.898799Z",
+          "ingested_at": "2026-09-21T00:53:05.896182Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 2,
+          "independent_source_count": 2
+        },
+        {
+          "id": "evt_mkt_nvda_202609161600_neg",
+          "timestamp": "2026-09-16T16:00:00Z",
+          "source_type": "market",
+          "event_type": "market_shock",
+          "title": "NVDA abnormal downside move",
+          "summary": "NVDA severe downside move at 2026-09-16 16:00 UTC. Shock score 0.99 (heuristic, uncalibrated). 5m log return -0.0103, return z -5.87 sigma, volume z 18.73 sigma, volatility z 13.87 sigma, sector residual z -8.97 sigma, market residual z -7.73 sigma. Source: REPLAY (not live data).",
+          "entities": [],
+          "companies": [
+            "NVDA"
+          ],
+          "locations": [],
+          "economic_channels": {},
+          "severity": 0.9932827998415591,
+          "novelty": 1.0,
+          "corroboration": 0.0,
+          "confidence": 1.0,
+          "source_refs": [
+            {
+              "name": "replay"
+            }
+          ],
+          "metadata": {
+            "level": "severe",
+            "provider": "replay",
+            "return_z": -5.8656559968311806,
+            "volume_z": 18.733239707934402,
+            "direction": "negative",
+            "return_5m": -0.010267457000773942,
+            "calibrated": false,
+            "components": {
+              "ret": 0.9776093328051968,
+              "market": 1.0,
+              "sector": 1.0,
+              "volume": 1.0,
+              "volatility": 1.0
+            },
+            "shock_score": 0.9932827998415591,
+            "volatility_z": 13.872077444934739,
+            "market_residual": -0.011489210215804981,
+            "sector_residual": -0.011727009421444766,
+            "volume_z_method": "tod",
+            "sector_benchmark": "SOXX",
+            "confidence_semantics": "signal_agreement_not_probability"
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T02:02:09.095090Z",
+          "ingested_at": "2026-09-21T02:02:09.095090Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 1,
+          "independent_source_count": 1
+        },
+        {
+          "id": "evt_world_9bc9d974282ef96e217e70b87af557ce91ee0530",
+          "timestamp": "2026-09-16T09:00:00Z",
+          "source_type": "world",
+          "event_type": "shipping_disruption",
+          "title": "Strait of Hormuz \u2014 Increased Naval Activity",
+          "summary": "Increased naval activity reported near the Strait of Hormuz. Several tankers are slowing or holding position and insurers are reviewing war-risk cover for transits through the shipping lane. (Synthetic replay data.)",
+          "entities": [
+            "Strait of Hormuz",
+            "Persian Gulf",
+            "crude oil",
+            "Middle East"
+          ],
+          "companies": [],
+          "locations": [
+            "Middle East",
+            "Strait of Hormuz"
+          ],
+          "economic_channels": {
+            "oil_supply": -0.9,
+            "global_trade": -0.3,
+            "energy_prices": 0.85,
+            "shipping_costs": 0.9,
+            "shipping_capacity": -0.9
+          },
+          "severity": 0.76,
+          "novelty": 1.0,
+          "corroboration": 0.7364514677470797,
+          "confidence": 0.860613,
+          "source_refs": [
+            {
+              "headline": "Strait of Hormuz \u2014 Increased Naval Activity",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.8,
+              "source_name": "Replay Wire A",
+              "published_at": "2026-09-16T09:02:00Z",
+              "retrieved_at": "2026-09-16T09:04:00Z",
+              "source_group": "replay_wire_a",
+              "syndicated_from": null,
+              "source_identifier": "rwa-hormuz-001"
+            },
+            {
+              "headline": "Naval build-up near Hormuz slows tanker traffic",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.75,
+              "source_name": "Replay Wire B",
+              "published_at": "2026-09-16T09:05:00Z",
+              "retrieved_at": "2026-09-16T09:07:00Z",
+              "source_group": "replay_wire_b",
+              "syndicated_from": null,
+              "source_identifier": "rwb-hormuz-001"
+            }
+          ],
+          "metadata": {
+            "provider": "replay",
+            "is_replay": true,
+            "fingerprint": "9bc9d974282ef96e217e70b87af557ce91ee0530",
+            "matched_terms": [
+              "category:shipping",
+              "category:maritime security",
+              "strait of hormuz",
+              "naval",
+              "shipping lane"
+            ],
+            "normalized_at": "2026-09-21T00:53:05.789574+00:00",
+            "text_sentiment": null,
+            "score_semantics": "severity/novelty/corroboration/confidence are heuristic scores in [0,1], not probabilities; economic channels are directional pressure in [-1,1], not expected price moves",
+            "channel_evidence": {
+              "oil_supply": [
+                "entity:Strait of Hormuz",
+                "rule:hormuz",
+                "entity:crude oil",
+                "rule:oil"
+              ],
+              "global_trade": [
+                "class:shipping_disruption"
+              ],
+              "energy_prices": [
+                "entity:Strait of Hormuz",
+                "rule:hormuz",
+                "entity:crude oil",
+                "rule:oil"
+              ],
+              "shipping_costs": [
+                "class:shipping_disruption",
+                "entity:Strait of Hormuz",
+                "rule:hormuz"
+              ],
+              "shipping_capacity": [
+                "class:shipping_disruption",
+                "entity:Strait of Hormuz",
+                "rule:hormuz"
+              ]
+            },
+            "score_components": {
+              "novelty": {
+                "considered": 0,
+                "history_size": 0,
+                "nearest_index": null,
+                "nearest_similarity": 0.0
+              },
+              "severity": {
+                "severity": 0.76,
+                "pre_blend": 0.75,
+                "class_base": 0.6,
+                "magnitude_key": null,
+                "geo_scope_bonus": 0.1,
+                "magnitude_bonus": 0.0,
+                "magnitude_score": 0.0,
+                "geo_scope_reason": "chokepoint",
+                "provider_importance": 0.85,
+                "infrastructure_bonus": 0.15,
+                "infrastructure_entities": [
+                  "Strait of Hormuz"
+                ],
+                "provider_importance_weight": 0.1
+              },
+              "confidence": {
+                "raw": 0.860613,
+                "note": "interpretation confidence: heuristic score, not a calibrated probability",
+                "capped": false,
+                "weights": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.25,
+                  "source_reliability": 0.1,
+                  "classification_certainty": 0.3
+                },
+                "has_text": true,
+                "contributions": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.184113,
+                  "source_reliability": 0.0775,
+                  "classification_certainty": 0.249
+                },
+                "defaulted_inputs": [],
+                "completeness_factor": 1.0
+              },
+              "corroboration": {
+                "base": 0.7534030360583935,
+                "diversity": 1.0,
+                "distinct_groups": 2,
+                "reliability_mean": 0.775,
+                "syndicated_count": 0,
+                "independent_count": 2
+              }
+            },
+            "provider_event_id": "replay-hormuz-001",
+            "severity_components": {
+              "severity": 0.76,
+              "pre_blend": 0.75,
+              "class_base": 0.6,
+              "magnitude_key": null,
+              "geo_scope_bonus": 0.1,
+              "magnitude_bonus": 0.0,
+              "magnitude_score": 0.0,
+              "geo_scope_reason": "chokepoint",
+              "provider_importance": 0.85,
+              "infrastructure_bonus": 0.15,
+              "infrastructure_entities": [
+                "Strait of Hormuz"
+              ],
+              "provider_importance_weight": 0.1
+            },
+            "confidence_components": {
+              "raw": 0.860613,
+              "note": "interpretation confidence: heuristic score, not a calibrated probability",
+              "capped": false,
+              "weights": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.25,
+                "source_reliability": 0.1,
+                "classification_certainty": 0.3
+              },
+              "has_text": true,
+              "contributions": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.184113,
+                "source_reliability": 0.0775,
+                "classification_certainty": 0.249
+              },
+              "defaulted_inputs": [],
+              "completeness_factor": 1.0
+            },
+            "classification_certainty": 0.83,
+            "corroboration_components": {
+              "base": 0.7534030360583935,
+              "diversity": 1.0,
+              "distinct_groups": 2,
+              "reliability_mean": 0.775,
+              "syndicated_count": 0,
+              "independent_count": 2
+            }
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T00:53:05.791874Z",
+          "ingested_at": "2026-09-21T00:53:05.789574Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 2,
+          "independent_source_count": 2
+        },
+        {
+          "id": "evt_world_6bbd84ac071be86a63bf951027cd91fa8dbba4d6",
+          "timestamp": "2026-09-15T14:20:00Z",
+          "source_type": "world",
+          "event_type": "infrastructure_outage",
+          "title": "Major cloud region outage disrupts services across North America",
+          "summary": "A fictional hyperscaler, Stratus Cloud, reports a multi-hour outage in its US East region. Compute, storage and networking services are unavailable for many customers. (Synthetic replay data.)",
+          "entities": [
+            "Stratus Cloud",
+            "United States",
+            "North America"
+          ],
+          "companies": [],
+          "locations": [
+            "United States",
+            "North America"
+          ],
+          "economic_channels": {
+            "compute_supply": -0.1,
+            "infrastructure_availability": -0.6
+          },
+          "severity": 0.47500000000000003,
+          "novelty": 1.0,
+          "corroboration": 0.48831225532233274,
+          "confidence": 0.735578,
+          "source_refs": [
+            {
+              "headline": "Major cloud region outage disrupts services across North America",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.7,
+              "source_name": "Replay Tech Bulletin",
+              "published_at": "2026-09-15T14:24:00Z",
+              "retrieved_at": "2026-09-15T14:26:00Z",
+              "source_group": "replay_tech_bulletin",
+              "syndicated_from": null,
+              "source_identifier": "rtb-cloud-001"
+            }
+          ],
+          "metadata": {
+            "provider": "replay",
+            "is_replay": true,
+            "fingerprint": "6bbd84ac071be86a63bf951027cd91fa8dbba4d6",
+            "matched_terms": [
+              "category:infrastructure outage",
+              "cloud",
+              "outage"
+            ],
+            "normalized_at": "2026-09-21T00:53:05.774803+00:00",
+            "text_sentiment": null,
+            "score_semantics": "severity/novelty/corroboration/confidence are heuristic scores in [0,1], not probabilities; economic channels are directional pressure in [-1,1], not expected price moves",
+            "channel_evidence": {
+              "compute_supply": [
+                "entity:Stratus Cloud",
+                "rule:cloud_datacenter"
+              ],
+              "infrastructure_availability": [
+                "class:infrastructure_outage",
+                "entity:Stratus Cloud",
+                "rule:cloud_datacenter"
+              ]
+            },
+            "score_components": {
+              "novelty": {
+                "considered": 0,
+                "history_size": 0,
+                "nearest_index": null,
+                "nearest_similarity": 0.0
+              },
+              "severity": {
+                "severity": 0.47500000000000003,
+                "pre_blend": 0.45,
+                "class_base": 0.45,
+                "magnitude_key": null,
+                "geo_scope_bonus": 0.0,
+                "magnitude_bonus": 0.0,
+                "magnitude_score": 0.0,
+                "geo_scope_reason": null,
+                "provider_importance": 0.7,
+                "infrastructure_bonus": 0.0,
+                "infrastructure_entities": [],
+                "provider_importance_weight": 0.1
+              },
+              "confidence": {
+                "raw": 0.735578,
+                "note": "interpretation confidence: heuristic score, not a calibrated probability",
+                "capped": false,
+                "weights": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.25,
+                  "source_reliability": 0.1,
+                  "classification_certainty": 0.3
+                },
+                "has_text": true,
+                "contributions": {
+                  "entity_count": 0.1125,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.122078,
+                  "source_reliability": 0.07,
+                  "classification_certainty": 0.231
+                },
+                "defaulted_inputs": [],
+                "completeness_factor": 1.0
+              },
+              "corroboration": {
+                "base": 0.5034146962085905,
+                "diversity": 1.0,
+                "distinct_groups": 1,
+                "reliability_mean": 0.7,
+                "syndicated_count": 0,
+                "independent_count": 1
+              }
+            },
+            "provider_event_id": "replay-cloud-outage-001",
+            "severity_components": {
+              "severity": 0.47500000000000003,
+              "pre_blend": 0.45,
+              "class_base": 0.45,
+              "magnitude_key": null,
+              "geo_scope_bonus": 0.0,
+              "magnitude_bonus": 0.0,
+              "magnitude_score": 0.0,
+              "geo_scope_reason": null,
+              "provider_importance": 0.7,
+              "infrastructure_bonus": 0.0,
+              "infrastructure_entities": [],
+              "provider_importance_weight": 0.1
+            },
+            "confidence_components": {
+              "raw": 0.735578,
+              "note": "interpretation confidence: heuristic score, not a calibrated probability",
+              "capped": false,
+              "weights": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.25,
+                "source_reliability": 0.1,
+                "classification_certainty": 0.3
+              },
+              "has_text": true,
+              "contributions": {
+                "entity_count": 0.1125,
+                "geo_resolved": 0.2,
+                "corroboration": 0.122078,
+                "source_reliability": 0.07,
+                "classification_certainty": 0.231
+              },
+              "defaulted_inputs": [],
+              "completeness_factor": 1.0
+            },
+            "classification_certainty": 0.77,
+            "corroboration_components": {
+              "base": 0.5034146962085905,
+              "diversity": 1.0,
+              "distinct_groups": 1,
+              "reliability_mean": 0.7,
+              "syndicated_count": 0,
+              "independent_count": 1
+            }
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T00:53:05.777252Z",
+          "ingested_at": "2026-09-21T00:53:05.774803Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 1,
+          "independent_source_count": 1
+        },
+        {
+          "id": "evt_world_52570c49bbb4282bfd42143c619c278e800cf9be",
+          "timestamp": "2026-09-15T05:45:00Z",
+          "source_type": "world",
+          "event_type": "energy_supply_disruption",
+          "title": "Drone attack halts crude pipeline pumping station and refinery in Saudi Arabia",
+          "summary": "An attack on an oil pipeline pumping station and adjacent refinery has forced a halt in crude flows and refined product output. Operators are assessing damage and restart timelines. (Synthetic replay data.)",
+          "entities": [
+            "Saudi Arabia",
+            "crude oil",
+            "pipeline",
+            "refinery",
+            "Middle East"
+          ],
+          "companies": [],
+          "locations": [
+            "Saudi Arabia",
+            "Middle East"
+          ],
+          "economic_channels": {
+            "oil_supply": -0.45,
+            "energy_prices": 0.85,
+            "infrastructure_availability": -0.2
+          },
+          "severity": 0.673,
+          "novelty": 1.0,
+          "corroboration": 0.7326844525667877,
+          "confidence": 0.761671,
+          "source_refs": [
+            {
+              "headline": "Drone attack halts crude pipeline pumping station and refinery in Saudi Arabia",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.75,
+              "source_name": "Replay Wire B",
+              "published_at": "2026-09-15T05:48:00Z",
+              "retrieved_at": "2026-09-15T05:50:00Z",
+              "source_group": "replay_wire_b",
+              "syndicated_from": null,
+              "source_identifier": "rwb-oil-001"
+            },
+            {
+              "headline": "Pipeline and refinery outage cuts Saudi crude flows",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.7,
+              "source_name": "Replay Energy Desk",
+              "published_at": "2026-09-15T05:53:00Z",
+              "retrieved_at": "2026-09-15T05:55:00Z",
+              "source_group": "replay_energy_desk",
+              "syndicated_from": null,
+              "source_identifier": "red-oil-001"
+            }
+          ],
+          "metadata": {
+            "provider": "replay",
+            "is_replay": true,
+            "fingerprint": "52570c49bbb4282bfd42143c619c278e800cf9be",
+            "matched_terms": [
+              "category:energy",
+              "pipeline",
+              "drone"
+            ],
+            "normalized_at": "2026-09-21T00:53:05.758047+00:00",
+            "text_sentiment": null,
+            "score_semantics": "severity/novelty/corroboration/confidence are heuristic scores in [0,1], not probabilities; economic channels are directional pressure in [-1,1], not expected price moves",
+            "channel_evidence": {
+              "oil_supply": [
+                "entity:crude oil",
+                "rule:oil",
+                "entity:Saudi Arabia",
+                "rule:gulf_producers"
+              ],
+              "energy_prices": [
+                "class:energy_supply_disruption",
+                "entity:crude oil",
+                "rule:oil",
+                "entity:Saudi Arabia",
+                "rule:gulf_producers"
+              ],
+              "infrastructure_availability": [
+                "class:energy_supply_disruption"
+              ]
+            },
+            "score_components": {
+              "novelty": {
+                "considered": 0,
+                "history_size": 0,
+                "nearest_index": null,
+                "nearest_similarity": 0.0
+              },
+              "severity": {
+                "severity": 0.673,
+                "pre_blend": 0.65,
+                "class_base": 0.65,
+                "magnitude_key": null,
+                "geo_scope_bonus": 0.0,
+                "magnitude_bonus": 0.0,
+                "magnitude_score": 0.0,
+                "geo_scope_reason": null,
+                "provider_importance": 0.88,
+                "infrastructure_bonus": 0.0,
+                "infrastructure_entities": [],
+                "provider_importance_weight": 0.1
+              },
+              "confidence": {
+                "raw": 0.761671,
+                "note": "interpretation confidence: heuristic score, not a calibrated probability",
+                "capped": false,
+                "weights": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.25,
+                  "source_reliability": 0.1,
+                  "classification_certainty": 0.3
+                },
+                "has_text": true,
+                "contributions": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.183171,
+                  "source_reliability": 0.0725,
+                  "classification_certainty": 0.156
+                },
+                "defaulted_inputs": [],
+                "completeness_factor": 1.0
+              },
+              "corroboration": {
+                "base": 0.7534030360583935,
+                "diversity": 1.0,
+                "distinct_groups": 2,
+                "reliability_mean": 0.725,
+                "syndicated_count": 0,
+                "independent_count": 2
+              }
+            },
+            "provider_event_id": "replay-oil-infra-001",
+            "severity_components": {
+              "severity": 0.673,
+              "pre_blend": 0.65,
+              "class_base": 0.65,
+              "magnitude_key": null,
+              "geo_scope_bonus": 0.0,
+              "magnitude_bonus": 0.0,
+              "magnitude_score": 0.0,
+              "geo_scope_reason": null,
+              "provider_importance": 0.88,
+              "infrastructure_bonus": 0.0,
+              "infrastructure_entities": [],
+              "provider_importance_weight": 0.1
+            },
+            "confidence_components": {
+              "raw": 0.761671,
+              "note": "interpretation confidence: heuristic score, not a calibrated probability",
+              "capped": false,
+              "weights": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.25,
+                "source_reliability": 0.1,
+                "classification_certainty": 0.3
+              },
+              "has_text": true,
+              "contributions": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.183171,
+                "source_reliability": 0.0725,
+                "classification_certainty": 0.156
+              },
+              "defaulted_inputs": [],
+              "completeness_factor": 1.0
+            },
+            "classification_certainty": 0.52,
+            "corroboration_components": {
+              "base": 0.7534030360583935,
+              "diversity": 1.0,
+              "distinct_groups": 2,
+              "reliability_mean": 0.725,
+              "syndicated_count": 0,
+              "independent_count": 2
+            }
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T00:53:05.761182Z",
+          "ingested_at": "2026-09-21T00:53:05.758047Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 2,
+          "independent_source_count": 2
+        },
+        {
+          "id": "evt_world_bb651496eeb8254e5ce1df9c0d268ab503c963ba",
+          "timestamp": "2026-09-14T02:30:00Z",
+          "source_type": "world",
+          "event_type": "natural_disaster",
+          "title": "Magnitude 7.4 earthquake strikes off Hualien, Taiwan",
+          "summary": "A strong earthquake struck near Hualien, Taiwan. Semiconductor fabs in the island's science parks are inspecting equipment; wafer production may be interrupted while safety checks continue. (Synthetic replay data.)",
+          "entities": [
+            "Taiwan",
+            "Hualien",
+            "semiconductor",
+            "TSMC",
+            "East Asia"
+          ],
+          "companies": [
+            "TSMC"
+          ],
+          "locations": [
+            "Taiwan",
+            "East Asia",
+            "Hualien"
+          ],
+          "economic_channels": {
+            "compute_supply": -0.8,
+            "semiconductor_supply": -1.0,
+            "infrastructure_availability": -0.25
+          },
+          "severity": 0.6772499999999999,
+          "novelty": 1.0,
+          "corroboration": 0.7402184829273717,
+          "confidence": 0.884555,
+          "source_refs": [
+            {
+              "headline": "Magnitude 7.4 earthquake strikes off Hualien, Taiwan",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.8,
+              "source_name": "Replay Wire A",
+              "published_at": "2026-09-14T02:33:00Z",
+              "retrieved_at": "2026-09-14T02:35:00Z",
+              "source_group": "replay_wire_a",
+              "syndicated_from": null,
+              "source_identifier": "rwa-quake-001"
+            },
+            {
+              "headline": "Strong quake near Hualien; fab production risk under review",
+              "metadata": {
+                "synthetic": true
+              },
+              "provider": "replay",
+              "source_url": null,
+              "reliability": 0.85,
+              "source_name": "Replay Geoscience Desk",
+              "published_at": "2026-09-14T02:36:00Z",
+              "retrieved_at": "2026-09-14T02:38:00Z",
+              "source_group": "replay_geoscience_desk",
+              "syndicated_from": null,
+              "source_identifier": "rgd-quake-001"
+            }
+          ],
+          "metadata": {
+            "provider": "replay",
+            "is_replay": true,
+            "fingerprint": "bb651496eeb8254e5ce1df9c0d268ab503c963ba",
+            "matched_terms": [
+              "category:natural disaster",
+              "category:earthquake",
+              "earthquake",
+              "magnitude 7"
+            ],
+            "normalized_at": "2026-09-21T00:53:05.565823+00:00",
+            "text_sentiment": null,
+            "score_semantics": "severity/novelty/corroboration/confidence are heuristic scores in [0,1], not probabilities; economic channels are directional pressure in [-1,1], not expected price moves",
+            "channel_evidence": {
+              "compute_supply": [
+                "entity:Taiwan",
+                "rule:taiwan",
+                "entity:TSMC",
+                "rule:tsmc",
+                "entity:semiconductor",
+                "rule:semiconductor_terms"
+              ],
+              "semiconductor_supply": [
+                "entity:Taiwan",
+                "rule:taiwan",
+                "entity:TSMC",
+                "rule:tsmc",
+                "entity:semiconductor",
+                "rule:semiconductor_terms"
+              ],
+              "infrastructure_availability": [
+                "class:natural_disaster"
+              ]
+            },
+            "score_components": {
+              "novelty": {
+                "considered": 0,
+                "history_size": 0,
+                "nearest_index": null,
+                "nearest_similarity": 0.0
+              },
+              "severity": {
+                "severity": 0.6772499999999999,
+                "pre_blend": 0.6525,
+                "class_base": 0.45,
+                "magnitude_key": "richter",
+                "geo_scope_bonus": 0.0,
+                "magnitude_bonus": 0.44999999999999996,
+                "magnitude_score": 1.0,
+                "geo_scope_reason": null,
+                "provider_importance": 0.9,
+                "infrastructure_bonus": 0.0,
+                "infrastructure_entities": [],
+                "provider_importance_weight": 0.1
+              },
+              "confidence": {
+                "raw": 0.884555,
+                "note": "interpretation confidence: heuristic score, not a calibrated probability",
+                "capped": false,
+                "weights": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.25,
+                  "source_reliability": 0.1,
+                  "classification_certainty": 0.3
+                },
+                "has_text": true,
+                "contributions": {
+                  "entity_count": 0.15,
+                  "geo_resolved": 0.2,
+                  "corroboration": 0.185055,
+                  "source_reliability": 0.0825,
+                  "classification_certainty": 0.267
+                },
+                "defaulted_inputs": [],
+                "completeness_factor": 1.0
+              },
+              "corroboration": {
+                "base": 0.7534030360583935,
+                "diversity": 1.0,
+                "distinct_groups": 2,
+                "reliability_mean": 0.825,
+                "syndicated_count": 0,
+                "independent_count": 2
+              }
+            },
+            "provider_event_id": "replay-taiwan-quake-001",
+            "severity_components": {
+              "severity": 0.6772499999999999,
+              "pre_blend": 0.6525,
+              "class_base": 0.45,
+              "magnitude_key": "richter",
+              "geo_scope_bonus": 0.0,
+              "magnitude_bonus": 0.44999999999999996,
+              "magnitude_score": 1.0,
+              "geo_scope_reason": null,
+              "provider_importance": 0.9,
+              "infrastructure_bonus": 0.0,
+              "infrastructure_entities": [],
+              "provider_importance_weight": 0.1
+            },
+            "confidence_components": {
+              "raw": 0.884555,
+              "note": "interpretation confidence: heuristic score, not a calibrated probability",
+              "capped": false,
+              "weights": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.25,
+                "source_reliability": 0.1,
+                "classification_certainty": 0.3
+              },
+              "has_text": true,
+              "contributions": {
+                "entity_count": 0.15,
+                "geo_resolved": 0.2,
+                "corroboration": 0.185055,
+                "source_reliability": 0.0825,
+                "classification_certainty": 0.267
+              },
+              "defaulted_inputs": [],
+              "completeness_factor": 1.0
+            },
+            "classification_certainty": 0.89,
+            "corroboration_components": {
+              "base": 0.7534030360583935,
+              "diversity": 1.0,
+              "distinct_groups": 2,
+              "reliability_mean": 0.825,
+              "syndicated_count": 0,
+              "independent_count": 2
+            }
+          },
+          "is_mock": true,
+          "created_at": "2026-09-21T00:53:05.616768Z",
+          "ingested_at": "2026-09-21T00:53:05.565823Z",
+          "revision": 1,
+          "updated_at": null,
+          "source_count": 2,
+          "independent_source_count": 2
+        }
+      ],
+      "total": 8,
+      "limit": 20,
+      "offset": 0
+    }
+  },
+  {
+    "path": "/api/v1/graph/snapshots",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "items": [
+        {
+          "snapshot_id": "gs_940908830291ae1f51d2",
+          "graph_version": "echo-graph-v1",
+          "created_at": "2026-09-21T00:51:35.464683Z",
+          "node_count": 105,
+          "edge_count": 85,
+          "content_hash": "940908830291ae1f51d23907b86f58f604c4b6aba98dd1feb33a7dec7576bb56",
+          "metadata": {
+            "seed_provenance": {
+              "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+              "source": "ECHO curated seed graph",
+              "reference": "backend/data/graph/seed.json",
+              "provenance_type": "MANUAL_CURATED"
+            }
+          }
+        }
+      ],
+      "total": 1
+    }
+  },
+  {
+    "path": "/api/v1/forecasting/status",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "artifact_available": true,
+      "model_status": "READY",
+      "model_version": "echo-forecast-v1-1ffa09297270",
+      "feature_version": "echo-features-v1",
+      "training_cutoff": "2025-01-10T14:30:00Z",
+      "artifact_hash": "e1065d87087263b43e7638fe71a86dbf97da00ea99e45e79927a258ba409efcf",
+      "backend": "linear_pinball_fallback",
+      "chronos_status": "BASELINE_UNAVAILABLE",
+      "chronos_model": "amazon/chronos-2",
+      "artifact_path": "/home/923873155/ECHO - Market Analysis/artifacts/models/day6-fixture/forecast-bundle.json"
+    }
+  },
+  {
+    "path": "/api/v1/backtests",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "items": [],
+      "total": 0
+    }
+  },
+  {
+    "path": "/api/v1/execution/status",
+    "status_code": 200,
+    "content_type": "application/json",
+    "body": {
+      "mode": "REPLAY",
+      "provider": "replay",
+      "configured": true,
+      "healthy": true,
+      "account_status": null,
+      "kill_switch": false,
+      "data_fresh": false,
+      "reconciliation_state": "UNKNOWN",
+      "message": "replay provider ready"
+    }
+  },
+  {
+    "path": "/metrics",
+    "status_code": 200,
+    "content_type": "text/plain; version=0.0.4; charset=utf-8",
+    "body": "# HELP echo_build_info ECHO build metadata.\n# TYPE echo_build_info gauge\necho_build_info{version=\"0.2.0-dev\"} 1\n# HELP echo_db_ping_duration_seconds Database health-check latency in seconds.\n# TYPE echo_db_ping_duration_seconds histogram\necho_db_ping_duration_seconds_bucket{le=\"0.005\"} 2\necho_db_ping_duration_seconds_bucket{le=\"0.01\"} 2\necho_db_ping_duration_seconds_bucket{le=\"0.025\"} 2\necho_db_ping_duration_seconds_bucket{le=\"0.05\"} 2\necho_db_ping_duration_seconds_bucket{le=\"0.1\"} 2\necho_db_ping_duration_seconds_bucket{le=\"0.25\"} 2\necho_db_ping_duration_seconds_bucket{le=\"0.5\"} 2\necho_db_ping_duration_seconds_bucket{le=\"1.0\"} 2\necho_db_ping_duration_seconds_bucket{le=\"2.5\"} 2\necho_db_ping_duration_seconds_bucket{le=\"5.0\"} 2\necho_db_ping_duration_seconds_bucket{le=\"10.0\"} 2\necho_db_ping_duration_seconds_bucket{le=\"+Inf\"} 2\necho_db_ping_duration_seconds_count 2\necho_db_ping_duration_seconds_sum 0.00597656\n# HELP echo_db_pool_checked_out Database connections checked out.\n# TYPE echo_db_pool_checked_out gauge\necho_db_pool_checked_out 0\n# HELP echo_db_pool_overflow Database pool overflow connections.\n# TYPE echo_db_pool_overflow gauge\necho_db_pool_overflow -3\n# HELP echo_db_pool_size Configured database pool size.\n# TYPE echo_db_pool_size gauge\necho_db_pool_size 5\n# HELP echo_db_session_duration_seconds Database session dependency duration in seconds.\n# TYPE echo_db_session_duration_seconds histogram\necho_db_session_duration_seconds_bucket{le=\"0.005\"} 1\necho_db_session_duration_seconds_bucket{le=\"0.01\"} 1\necho_db_session_duration_seconds_bucket{le=\"0.025\"} 3\necho_db_session_duration_seconds_bucket{le=\"0.05\"} 4\necho_db_session_duration_seconds_bucket{le=\"0.1\"} 4\necho_db_session_duration_seconds_bucket{le=\"0.25\"} 4\necho_db_session_duration_seconds_bucket{le=\"0.5\"} 4\necho_db_session_duration_seconds_bucket{le=\"1.0\"} 4\necho_db_session_duration_seconds_bucket{le=\"2.5\"} 4\necho_db_session_duration_seconds_bucket{le=\"5.0\"} 4\necho_db_session_duration_seconds_bucket{le=\"10.0\"} 4\necho_db_session_duration_seconds_bucket{le=\"+Inf\"} 4\necho_db_session_duration_seconds_count 4\necho_db_session_duration_seconds_sum 0.0759344\n# HELP echo_execution_healthy Execution provider health.\n# TYPE echo_execution_healthy gauge\necho_execution_healthy{provider=\"replay\"} 1\n# HELP echo_execution_kill_switch Whether paper execution is paused.\n# TYPE echo_execution_kill_switch gauge\necho_execution_kill_switch 0\n# HELP echo_execution_reconciliation_mismatch Whether reconciliation has a mismatch.\n# TYPE echo_execution_reconciliation_mismatch gauge\necho_execution_reconciliation_mismatch 0\n# HELP echo_http_request_duration_seconds HTTP request duration in seconds.\n# TYPE echo_http_request_duration_seconds histogram\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"0.005\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/backtests\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/backtests\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/backtests\"} 0.00255735\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"0.005\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"0.01\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/events\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/events\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/events\"} 0.0148192\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"0.005\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/execution/status\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/execution/status\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/execution/status\"} 0.00221395\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"0.005\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/forecasting/status\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/forecasting/status\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/forecasting/status\"} 0.00509279\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"0.005\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"0.01\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/graph/snapshots\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/graph/snapshots\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/graph/snapshots\"} 0.0123628\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"0.005\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/health\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/health\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/health\"} 0.00252976\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"0.005\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/status\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/market/status\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/market/status\"} 0.001638\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"0.005\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/market/symbols\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/market/symbols\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/market/symbols\"} 0.00278905\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"0.005\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ops/status\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/ops/status\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/ops/status\"} 0.00564146\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"0.005\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"0.01\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"0.025\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"0.05\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/ready\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/ready\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/ready\"} 0.0500162\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"0.005\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"0.01\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"0.025\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"0.05\"} 0\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/system/config-status\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/system/config-status\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/system/config-status\"} 0.0940273\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"0.005\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"0.01\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"0.025\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"0.05\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"0.1\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"0.25\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"0.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"1.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"2.5\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"5.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"10.0\"} 1\necho_http_request_duration_seconds_bucket{method=\"GET\",path=\"/api/v1/world/status\",le=\"+Inf\"} 1\necho_http_request_duration_seconds_count{method=\"GET\",path=\"/api/v1/world/status\"} 1\necho_http_request_duration_seconds_sum{method=\"GET\",path=\"/api/v1/world/status\"} 0.00216349\n# HELP echo_http_requests_total HTTP requests completed.\n# TYPE echo_http_requests_total counter\necho_http_requests_total{method=\"GET\",path=\"/api/v1/backtests\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/events\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/execution/status\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/forecasting/status\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/graph/snapshots\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/health\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/market/status\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/market/symbols\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/ops/status\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/ready\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/system/config-status\",status=\"200\"} 1\necho_http_requests_total{method=\"GET\",path=\"/api/v1/world/status\",status=\"200\"} 1\n# HELP echo_market_messages_dropped_total Market messages dropped by the bounded queue.\n# TYPE echo_market_messages_dropped_total gauge\necho_market_messages_dropped_total 0\n# HELP echo_market_queue_capacity Market queue capacity.\n# TYPE echo_market_queue_capacity gauge\necho_market_queue_cap"
+  }
+]

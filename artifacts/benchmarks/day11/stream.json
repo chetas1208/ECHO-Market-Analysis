@@ -1,0 +1,11 @@
+{
+  "dropped": 4936,
+  "elapsed_ms": 23.9595,
+  "overflow_policy": "drop_oldest",
+  "queue_capacity": 64,
+  "queue_depth": 64,
+  "samples": 5000,
+  "scope": "bounded market pipeline enqueue seam; no provider or database",
+  "status": "MEASURED",
+  "throughput_per_second": 208685.5
+}

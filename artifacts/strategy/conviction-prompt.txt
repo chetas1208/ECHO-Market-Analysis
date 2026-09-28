@@ -1,0 +1,10 @@
+Implement exactly ECHO strategy version echo-rp-v1 using config hash 128191d8304211045b29cb8b7dde187286242428f0e68b5e1e99efe9b06b5602.
+
+Use liquid symbols from backend/config/universe.yaml. At a frozen UTC cutoff, consume only event, ShockGraph, cause, market residual, volume, freshness, OOD, and forecast-vintage inputs available at that cutoff.
+
+LONG: q50 > 0 with abs(q50) >= 0.005, probability-positive >= 0.60, abs(graph exposure) >= 0.20 with positive directional exposure, graph confidence >= 0.60, event confidence >= 0.60, q90-q10 <= 0.25, absorption ratio <= 0.75, residual z < 2.5, moderate market/sector confirmation, and all risk limits pass.
+SHORT: symmetric negative-q50 rule with probability-positive <= 0.40 and negative directional exposure. Otherwise ABSTAIN with an explicit reason.
+
+Trade only 1D, 2D, or 5D. Enter at the next bar after the completed decision bar. Risk 0.75% of current equity per trade; max position 20%, five concurrent positions, two positions per sector, 30% sector gross, 100% total gross. Use a 1.5-risk-unit stop or horizon exit. Hedge mode is NONE. Block new trades at 5% drawdown, daily loss breach, stale data, OOD, invalid forecast, non-tradable/shortable assets, or kill switch.
+
+Execution is PAPER only. A broker call is allowed only for a validated PAPER_TRADE OrderIntent after the forecast, risk, freshness, portfolio, account, and duplicate checks pass. Never use live credentials or bypass the ECHO execution adapter. Keep historical replay fills separate from Alpaca fills.

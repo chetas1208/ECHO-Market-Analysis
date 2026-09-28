@@ -1,0 +1,39 @@
+{
+  "package_version": "echo-demo-v1",
+  "mode": "REPLAY",
+  "execution_mode": "DISABLED",
+  "source_policy": "deterministic checked-in fixtures; not live data",
+  "scenarios": [
+    {
+      "id": "hormuz-propagation",
+      "label": "Hormuz disruption",
+      "status": "SUPPORTED",
+      "path": ["world event", "oil / shipping", "XOM / LNG / DAL / UAL", "forecast", "paper-only decision"],
+      "seed_event": "evt_mock_hormuz_naval_001"
+    },
+    {
+      "id": "taiwan-semiconductor",
+      "label": "Taiwan semiconductor interruption",
+      "status": "NARRATIVE_FIXTURE",
+      "path": ["world event", "semiconductor supply", "TSM / NVDA / AMD", "graph", "forecast"]
+    },
+    {
+      "id": "market-shock-cause",
+      "label": "Market shock to cause investigation",
+      "status": "SUPPORTED_BY_CAUSE_ENGINE",
+      "path": ["market shock", "cluster", "candidate causes", "cause score or UNKNOWN"]
+    },
+    {
+      "id": "unknown-cause",
+      "label": "Unknown cause",
+      "status": "SUPPORTED",
+      "path": ["market shock", "no candidate clears threshold", "UNKNOWN"]
+    },
+    {
+      "id": "abstain",
+      "label": "Already-priced / abstain",
+      "status": "SUPPORTED_BY_STRATEGY_GATE",
+      "path": ["event", "exposure", "absorption gate", "ABSTAIN / NO_TRADE"]
+    }
+  ]
+}

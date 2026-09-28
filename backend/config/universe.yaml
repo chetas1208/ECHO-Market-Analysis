@@ -1,0 +1,48 @@
+# ECHO live market universe (Day 2 starter set). Single source of truth: do not hardwire symbols elsewhere.
+# role: equity | benchmark.  sector_benchmark: ETF used for sector residual. market_benchmark: SPY.
+market_benchmark: SPY
+default_sector_benchmark: SPY   # used when a stock has no better sector ETF
+symbols:
+  # Semiconductors
+  - {symbol: NVDA, group: semiconductors, role: equity, sector_benchmark: SOXX}
+  - {symbol: AMD,  group: semiconductors, role: equity, sector_benchmark: SOXX}
+  - {symbol: AVGO, group: semiconductors, role: equity, sector_benchmark: SOXX}
+  - {symbol: TSM,  group: semiconductors, role: equity, sector_benchmark: SOXX}
+  - {symbol: INTC, group: semiconductors, role: equity, sector_benchmark: SOXX}
+  - {symbol: QCOM, group: semiconductors, role: equity, sector_benchmark: SOXX}
+  - {symbol: MU,   group: semiconductors, role: equity, sector_benchmark: SOXX}
+  # Hyperscalers / technology
+  - {symbol: MSFT,  group: technology, role: equity, sector_benchmark: QQQ}
+  - {symbol: AMZN,  group: technology, role: equity, sector_benchmark: QQQ}
+  - {symbol: GOOGL, group: technology, role: equity, sector_benchmark: QQQ}
+  - {symbol: META,  group: technology, role: equity, sector_benchmark: QQQ}
+  - {symbol: AAPL,  group: technology, role: equity, sector_benchmark: QQQ}
+  # Energy
+  - {symbol: XOM, group: energy, role: equity, sector_benchmark: XLE}
+  - {symbol: CVX, group: energy, role: equity, sector_benchmark: XLE}
+  - {symbol: COP, group: energy, role: equity, sector_benchmark: XLE}
+  - {symbol: SLB, group: energy, role: equity, sector_benchmark: XLE}
+  - {symbol: LNG, group: energy, role: equity, sector_benchmark: XLE}
+  # Airlines (no dedicated liquid sector ETF in the set -> industrials)
+  - {symbol: DAL, group: airlines, role: equity, sector_benchmark: XLI}
+  - {symbol: UAL, group: airlines, role: equity, sector_benchmark: XLI}
+  - {symbol: AAL, group: airlines, role: equity, sector_benchmark: XLI}
+  - {symbol: LUV, group: airlines, role: equity, sector_benchmark: XLI}
+  # Defense
+  - {symbol: LMT, group: defense, role: equity, sector_benchmark: XLI}
+  - {symbol: RTX, group: defense, role: equity, sector_benchmark: XLI}
+  - {symbol: NOC, group: defense, role: equity, sector_benchmark: XLI}
+  # Cybersecurity
+  - {symbol: CRWD, group: cybersecurity, role: equity, sector_benchmark: QQQ}
+  - {symbol: PANW, group: cybersecurity, role: equity, sector_benchmark: QQQ}
+  # Financials
+  - {symbol: JPM, group: financials, role: equity, sector_benchmark: XLF}
+  - {symbol: BAC, group: financials, role: equity, sector_benchmark: XLF}
+  - {symbol: GS,  group: financials, role: equity, sector_benchmark: XLF}
+  # Benchmarks
+  - {symbol: SPY,  group: benchmark, role: benchmark}
+  - {symbol: QQQ,  group: benchmark, role: benchmark}
+  - {symbol: SOXX, group: benchmark, role: benchmark}
+  - {symbol: XLE,  group: benchmark, role: benchmark}
+  - {symbol: XLF,  group: benchmark, role: benchmark}
+  - {symbol: XLI,  group: benchmark, role: benchmark}

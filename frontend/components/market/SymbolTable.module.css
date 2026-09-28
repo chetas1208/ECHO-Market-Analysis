@@ -1,0 +1,157 @@
+.wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+}
+
+.wrap:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.table {
+  width: 100%;
+  min-width: 460px;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th,
+.table td {
+  padding: 5px 8px;
+  text-align: right;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--line);
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  color: var(--text-faint);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--bg-inset);
+}
+
+.table .left {
+  text-align: left;
+}
+
+.num {
+  font-family: var(--font-mono);
+}
+
+.sym {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tag {
+  margin-left: 6px;
+  padding: 0 4px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+
+.row td,
+.row th[scope="row"] {
+  color: var(--text-dim);
+}
+
+.row .sym {
+  color: var(--text);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover,
+.clickable:focus-visible {
+  background: var(--accent-soft);
+  outline: none;
+}
+
+.clickable:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.selected {
+  background: var(--accent-soft);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.shock {
+  background: rgba(229, 97, 90, 0.1);
+  box-shadow: inset 3px 0 0 var(--neg);
+}
+
+.shock td,
+.shock th[scope="row"] {
+  color: var(--text);
+}
+
+.benchmark td,
+.benchmark th[scope="row"] {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.firstBenchmark td,
+.firstBenchmark th[scope="row"] {
+  border-top: 2px solid var(--line-strong);
+}
+
+.pos {
+  color: var(--pos) !important;
+}
+
+.neg {
+  color: var(--neg) !important;
+}
+
+.chip {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+
+.chipNormal {
+  color: var(--text-dim);
+}
+
+.chipWatch {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.chipShock {
+  color: var(--neg);
+  border-color: var(--neg);
+  background: rgba(229, 97, 90, 0.15);
+}
+
+.chipSevere {
+  color: #fff;
+  border-color: var(--neg);
+  background: var(--neg);
+}
+
+.chipMuted {
+  color: var(--text-faint);
+  border-style: dashed;
+}

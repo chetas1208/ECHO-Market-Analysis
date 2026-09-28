@@ -1,0 +1,45 @@
+{
+  "artifact": {
+    "artifact_hash": "e1065d87087263b43e7638fe71a86dbf97da00ea99e45e79927a258ba409efcf",
+    "backend": "linear_pinball_fallback",
+    "model_version": "echo-forecast-v1-1ffa09297270"
+  },
+  "dataset": {
+    "dataset_hash": "1ffa092972707da5f0d64129187e789f48b28a944d3c3497ee3375f3fd496f7e",
+    "rows": 45
+  },
+  "retrained": false,
+  "split": {
+    "dataset_hash": "1ffa092972707da5f0d64129187e789f48b28a944d3c3497ee3375f3fd496f7e",
+    "event_groups": 15,
+    "test_end": "2025-01-16 14:30:00+00:00",
+    "test_groups": [
+      "fixture_event_12",
+      "fixture_event_13",
+      "fixture_event_14"
+    ],
+    "test_start": "2025-01-14 14:30:00+00:00",
+    "train_end": "2025-01-10 14:30:00+00:00",
+    "train_groups": [
+      "fixture_event_00",
+      "fixture_event_01",
+      "fixture_event_02",
+      "fixture_event_03",
+      "fixture_event_04",
+      "fixture_event_05",
+      "fixture_event_06",
+      "fixture_event_07",
+      "fixture_event_08"
+    ],
+    "train_start": "2025-01-02 14:30:00+00:00",
+    "validation_end": "2025-01-13 14:30:00+00:00",
+    "validation_groups": [
+      "fixture_event_09",
+      "fixture_event_10",
+      "fixture_event_11"
+    ],
+    "validation_start": "2025-01-11 14:30:00+00:00"
+  },
+  "status": "complete",
+  "test_rows": 9
+}

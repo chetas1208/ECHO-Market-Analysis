@@ -1,0 +1,11 @@
+{
+  "max": 1.4072,
+  "min": 0.9584,
+  "p50": 1.0085,
+  "p95": 1.0356,
+  "samples": 250,
+  "scope": "pure world normalization, no database",
+  "status": "MEASURED",
+  "throughput_per_second": 996.79,
+  "unit": "ms"
+}

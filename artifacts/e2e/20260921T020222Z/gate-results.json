@@ -1,0 +1,81 @@
+{
+  "run_id": "20260921T020222Z",
+  "generated_at_utc": "2026-09-21T02:05:52.007497+00:00",
+  "gates": [
+    {
+      "name": "postgresql_direct",
+      "status": "PASS",
+      "evidence": "127.0.0.1:5433 reachable with asyncpg"
+    },
+    {
+      "name": "alembic_upgrade_head",
+      "status": "PASS",
+      "evidence": "make migrate"
+    },
+    {
+      "name": "idempotent_seed",
+      "status": "PASS",
+      "evidence": "make seed; evt_mock_hormuz_naval_001 skipped as already present"
+    },
+    {
+      "name": "graph_seed_validation",
+      "status": "PASS",
+      "evidence": "105 nodes, 52 companies, 85 edges"
+    },
+    {
+      "name": "api_http_smoke",
+      "status": "PASS",
+      "evidence": "13/13 endpoints returned HTTP < 400"
+    },
+    {
+      "name": "frontend_http_routes",
+      "status": "PASS",
+      "evidence": "6/6 Next.js routes returned HTTP < 400"
+    },
+    {
+      "name": "frontend_unit_tests",
+      "status": "PASS",
+      "evidence": "20 files, 163 tests"
+    },
+    {
+      "name": "frontend_quality",
+      "status": "PASS",
+      "evidence": "pnpm typecheck, pnpm lint, pnpm build"
+    },
+    {
+      "name": "backend_full_suite",
+      "status": "PASS",
+      "evidence": "1336 passed, 90 skipped, 1 warning"
+    },
+    {
+      "name": "backtest_reproducibility",
+      "status": "PASS",
+      "evidence": "run 0e4a33a922f147aefc17 verified with no differences"
+    },
+    {
+      "name": "paper_execution_dry_run",
+      "status": "PASS",
+      "evidence": "REPLAY, CREATED, broker_called=false"
+    },
+    {
+      "name": "release_manifest",
+      "status": "PASS",
+      "evidence": "verified=true, differences=[]"
+    },
+    {
+      "name": "deep_domain_flow",
+      "status": "PASS_WITH_EXPECTED_GUARD",
+      "evidence": "8/9 corrected calls passed; world-event cutoff guard returned 503"
+    },
+    {
+      "name": "docker_compose_database",
+      "status": "BLOCKED_HOST",
+      "evidence": "daemon cgroup.controllers unavailable; existing direct PostgreSQL used; no reset performed"
+    },
+    {
+      "name": "chromium_browser_automation",
+      "status": "BLOCKED_HOST",
+      "evidence": "libasound.so.2 unavailable; HTTP route evidence passed"
+    }
+  ]
+}

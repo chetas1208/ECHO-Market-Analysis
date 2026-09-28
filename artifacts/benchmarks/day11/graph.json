@@ -1,0 +1,10 @@
+{
+  "max": 48.1056,
+  "min": 0.0289,
+  "p50": 0.0308,
+  "p95": 0.0403,
+  "samples": 250,
+  "scope": "pure ShockGraph propagation, 105 nodes/85 edges",
+  "status": "MEASURED",
+  "unit": "ms"
+}

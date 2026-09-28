@@ -1,0 +1,9 @@
+{
+  "mode": "HISTORICAL_REPLAY",
+  "sample_status": "INSUFFICIENT_DATA",
+  "case_count": 18,
+  "start": "2025-01-02T14:30:00+00:00",
+  "end": "2025-01-19T14:30:00+00:00",
+  "event_groups": 18,
+  "future_access_policy": "strictly_after_decision_for_execution"
+}

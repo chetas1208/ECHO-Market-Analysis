@@ -1,0 +1,12 @@
+{
+  "artifact_sha256": "e1065d87087263b43e7638fe71a86dbf97da00ea99e45e79927a258ba409efcf",
+  "chronos": "UNAVAILABLE",
+  "max": 0.4412,
+  "min": 0.2474,
+  "p50": 0.2544,
+  "p95": 0.279,
+  "samples": 100,
+  "scope": "registered linear fallback forecast inference, no Chronos",
+  "status": "MEASURED",
+  "unit": "ms"
+}

@@ -1,0 +1,10 @@
+{
+  "max": 1.9129,
+  "min": 0.3315,
+  "p50": 0.3479,
+  "p95": 0.3808,
+  "samples": 100,
+  "scope": "ASGI liveness endpoint, no database or provider",
+  "status": "MEASURED",
+  "unit": "ms"
+}

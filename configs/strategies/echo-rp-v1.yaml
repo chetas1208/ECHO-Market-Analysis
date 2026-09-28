@@ -1,0 +1,31 @@
+strategy_version: echo-rp-v1
+universe:
+  source: backend/config/universe.yaml
+  role: liquid_equities
+signal:
+  min_graph_exposure: 0.20
+  min_graph_confidence: 0.60
+  min_event_confidence: 0.60
+  min_probability: 0.60
+  min_q50_abs: 0.005
+  max_interval_width: 0.25
+  max_absorption_ratio: 0.75
+  already_priced_residual_z: 2.5
+confirmation: MODERATE
+execution:
+  entry_delay_minutes: 1
+  horizons: [1D, 2D, 5D]
+  stop_atr_multiple: 1.5
+risk:
+  risk_per_trade: 0.0075
+  max_position_pct: 0.20
+  max_positions: 5
+  max_sector_positions: 2
+  max_sector_gross_pct: 0.30
+  max_total_gross_pct: 1.0
+  max_drawdown: 0.05
+  daily_loss_limit: 0.02
+hedge:
+  mode: NONE
+costs:
+  multiplier: 1.0

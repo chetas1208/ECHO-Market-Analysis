@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "world-monitor": {
+      "transport": "streamable-http",
+      "url": "${WORLDMONITOR_MCP_URL}",
+      "headers": {
+        "X-WorldMonitor-Key": "${WORLD_MONITOR_API_KEY}"
+      }
+    },
+    "alpaca": {
+      "command": "${ALPACA_MCP_COMMAND}",
+      "args": [],
+      "env": {
+        "ALPACA_API_KEY": "${ALPACA_API_KEY}",
+        "ALPACA_SECRET_KEY": "${ALPACA_SECRET_KEY}",
+        "ALPACA_PAPER_TRADE": "${ALPACA_PAPER_TRADE}",
+        "ALPACA_TOOLSETS": "${ALPACA_TOOLSETS}"
+      }
+    },
+    "aure": {
+      "command": "${AURE_BINARY}",
+      "args": ["mcp", "${AURE_DATABASE_PATH}"]
+    }
+  }
+}

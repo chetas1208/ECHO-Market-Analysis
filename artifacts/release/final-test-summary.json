@@ -1,0 +1,14 @@
+{
+  "backend_full": {"passed": 1328, "failed": 0, "skipped": 90},
+  "backend_final_targeted": {"passed": 9, "failed": 0, "skipped": 0},
+  "frontend_tests": {"passed": 163, "failed": 0, "skipped": 0},
+  "frontend_lint": "PASS",
+  "frontend_typecheck": "PASS",
+  "frontend_build": "PASS",
+  "backend_ruff": "PASS",
+  "alembic_check": "PASS",
+  "replay_runtime": {"health": "ok", "ready": "ready", "market": "REPLAY/CONNECTED", "world_events": 6, "forecast": "READY"},
+  "replay_dry_run_broker_called": false,
+  "alpaca_paper": "NOT_VERIFIED",
+  "recorded_at": "2026-09-21"
+}

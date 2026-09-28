@@ -1,0 +1,163 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(96px, 160px) minmax(90px, 360px) 46px auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track {
+  position: relative;
+  height: 8px;
+  background: var(--bg-inset);
+  border-radius: 1px;
+}
+
+.axis {
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  bottom: -2px;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.bar {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  border-radius: 1px;
+}
+
+.pos {
+  background: var(--pos);
+}
+
+.neg {
+  background: var(--neg);
+}
+
+.value {
+  text-align: right;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.valuePos {
+  color: var(--pos);
+}
+
+.valueNeg {
+  color: var(--neg);
+}
+
+.valueZero {
+  color: var(--text-dim);
+}
+
+.toggle {
+  font: inherit;
+  font-size: 11.5px;
+  color: var(--text-dim);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1px 6px;
+  cursor: pointer;
+  min-width: 64px;
+}
+
+.toggle:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.spacer {
+  min-width: 64px;
+}
+
+.evidence {
+  list-style: none;
+  margin: 0 0 2px;
+  padding: 4px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  background: var(--bg-inset);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.rule {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-dim);
+}
+
+.legend {
+  margin: 8px 0 0;
+  font-size: 11.5px;
+  color: var(--text-faint);
+}
+
+.empty {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 479px) {
+  .list {
+    gap: 10px;
+  }
+
+  .main {
+    grid-template-columns: 1fr 46px auto;
+    grid-template-areas: "name value toggle" "track track track";
+    gap: 3px 10px;
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .value {
+    grid-area: value;
+  }
+
+  .track {
+    grid-area: track;
+  }
+
+  .toggle,
+  .spacer {
+    grid-area: toggle;
+  }
+}

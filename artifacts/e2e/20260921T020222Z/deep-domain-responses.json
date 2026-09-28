@@ -1,0 +1,3409 @@
+[
+  {
+    "label": "event detail",
+    "method": "GET",
+    "path": "/events/evt_mock_hormuz_naval_001",
+    "status_code": 200,
+    "body": {
+      "id": "evt_mock_hormuz_naval_001",
+      "timestamp": "2026-09-20T17:00:00Z",
+      "source_type": "world",
+      "event_type": "geopolitical_shipping_disruption",
+      "title": "Strait of Hormuz \u2014 Increased Naval Activity",
+      "summary": "MOCK FIXTURE: Elevated naval deployments reported near the Strait of Hormuz, raising the risk of disruption to crude oil and LNG tanker traffic.",
+      "entities": [
+        "Strait of Hormuz"
+      ],
+      "companies": [],
+      "locations": [
+        "Middle East"
+      ],
+      "economic_channels": {
+        "oil_supply": -0.82,
+        "global_trade": -0.61,
+        "energy_prices": 0.73,
+        "shipping_costs": 0.77
+      },
+      "severity": 0.88,
+      "novelty": 0.74,
+      "corroboration": 0.91,
+      "confidence": 0.91,
+      "source_refs": [
+        {
+          "url": null,
+          "name": "World Monitor (mock fixture)"
+        }
+      ],
+      "metadata": {
+        "note": "Synthetic Day 1 fixture; not derived from a live feed.",
+        "fixture": "mock"
+      },
+      "is_mock": true,
+      "created_at": "2026-09-21T00:51:34.012671Z",
+      "ingested_at": "2026-09-21T00:51:34.012671Z",
+      "revision": 1,
+      "updated_at": null,
+      "source_count": 1,
+      "independent_source_count": 1
+    }
+  },
+  {
+    "label": "event sources",
+    "method": "GET",
+    "path": "/events/evt_mock_hormuz_naval_001/sources",
+    "status_code": 200,
+    "body": {
+      "items": [],
+      "total": 0
+    }
+  },
+  {
+    "label": "event graph",
+    "method": "GET",
+    "path": "/events/evt_mock_hormuz_naval_001/graph",
+    "status_code": 200,
+    "body": {
+      "event_id": "evt_mock_hormuz_naval_001",
+      "graph_snapshot_id": "gs_940908830291ae1f51d2",
+      "graph_version": "echo-graph-v1",
+      "nodes": [
+        {
+          "id": "channel:energy_prices",
+          "node_type": "channel",
+          "canonical_name": "Energy prices",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "channel:global_trade",
+          "node_type": "channel",
+          "canonical_name": "Global trade",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "channel:oil_supply",
+          "node_type": "channel",
+          "canonical_name": "Oil supply",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "channel:shipping_costs",
+          "node_type": "channel",
+          "canonical_name": "Shipping costs",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "commodity:brent_crude",
+          "node_type": "commodity",
+          "canonical_name": "Brent crude",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {
+            "unit": "barrel"
+          }
+        },
+        {
+          "id": "company:aal",
+          "node_type": "company",
+          "canonical_name": "American Airlines",
+          "symbol": "AAL",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:cat",
+          "node_type": "company",
+          "canonical_name": "Caterpillar",
+          "symbol": "CAT",
+          "external_ids": {},
+          "metadata": {
+            "sector": "industrials"
+          }
+        },
+        {
+          "id": "company:cop",
+          "node_type": "company",
+          "canonical_name": "ConocoPhillips",
+          "symbol": "COP",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:cvx",
+          "node_type": "company",
+          "canonical_name": "Chevron",
+          "symbol": "CVX",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:dal",
+          "node_type": "company",
+          "canonical_name": "Delta Air Lines",
+          "symbol": "DAL",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:eog",
+          "node_type": "company",
+          "canonical_name": "EOG Resources",
+          "symbol": "EOG",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:fdx",
+          "node_type": "company",
+          "canonical_name": "FedEx",
+          "symbol": "FDX",
+          "external_ids": {},
+          "metadata": {
+            "sector": "logistics"
+          }
+        },
+        {
+          "id": "company:lng",
+          "node_type": "company",
+          "canonical_name": "Cheniere Energy",
+          "symbol": "LNG",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:luv",
+          "node_type": "company",
+          "canonical_name": "Southwest Airlines",
+          "symbol": "LUV",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:oxy",
+          "node_type": "company",
+          "canonical_name": "Occidental Petroleum",
+          "symbol": "OXY",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:tte",
+          "node_type": "company",
+          "canonical_name": "TotalEnergies",
+          "symbol": "TTE",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:ual",
+          "node_type": "company",
+          "canonical_name": "United Airlines",
+          "symbol": "UAL",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:unp",
+          "node_type": "company",
+          "canonical_name": "Union Pacific",
+          "symbol": "UNP",
+          "external_ids": {},
+          "metadata": {
+            "sector": "logistics"
+          }
+        },
+        {
+          "id": "company:ups",
+          "node_type": "company",
+          "canonical_name": "United Parcel Service",
+          "symbol": "UPS",
+          "external_ids": {},
+          "metadata": {
+            "sector": "logistics"
+          }
+        },
+        {
+          "id": "company:xom",
+          "node_type": "company",
+          "canonical_name": "Exxon Mobil",
+          "symbol": "XOM",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "sector:logistics",
+          "node_type": "sector",
+          "canonical_name": "Logistics",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge_0b9b6a6839ec86c15c79fb9a",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:cvx",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.82,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_11c7e5f884bb0a15196df641",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:oxy",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.77,
+          "confidence": 0.93,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_1cb38cd40c1171f4483084b0",
+          "source_node_id": "sector:logistics",
+          "target_node_id": "company:fdx",
+          "relationship_type": "MEMBER_OF_SECTOR",
+          "sign": 1,
+          "weight": 0.8,
+          "confidence": 0.97,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_49bd1cdd5e27f1dc03d4f69b",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:unp",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.5,
+          "confidence": 0.82,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_5c0081e92645bb7e39d11850",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:luv",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.63,
+          "confidence": 0.92,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_5c04d88ade79c68a6b75c4c9",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:ual",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.48,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_669c5b3cb0fb0025b68bc1d1",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:cvx",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.81,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_77a7b5e2ecc238f432b3286e",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:ual",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.7,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_78790170e20186eaa6d7b876",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:dal",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.62,
+          "confidence": 0.9,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_7c8e3c913f93e71634e96aa5",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:ups",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.68,
+          "confidence": 0.88,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_90174a49345eba86cd28d3ee",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:eog",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.75,
+          "confidence": 0.93,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_95ece7c028393d19f5dc762b",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:fdx",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.52,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_ad38cfaaa12b2101234fbcf3",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:lng",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.65,
+          "confidence": 0.9,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_b3b9b6fd3ee61a127c8cd694",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:xom",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.84,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_c7a77b0c84e7026afc44a990",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:xom",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.85,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_cc10ff8e997e7817bb2549c8",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:ual",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.6,
+          "confidence": 0.9,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_cf8ba8c1efa9242e3347f863",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:tte",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.7,
+          "confidence": 0.92,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d20d335e03bcf239acedca72",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:cat",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.52,
+          "confidence": 0.82,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d56421ddb33835223bd41442",
+          "source_node_id": "channel:energy_prices",
+          "target_node_id": "commodity:brent_crude",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.85,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d65d3cc0250e0cbe8fbdf2d8",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "sector:logistics",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.75,
+          "confidence": 0.88,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d8678aa8e698cbee31c002a9",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:aal",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.68,
+          "confidence": 0.93,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d911836b70da3dcb014cd898",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:dal",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.72,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d990df9d22bde0ccbba63e3f",
+          "source_node_id": "sector:logistics",
+          "target_node_id": "company:ups",
+          "relationship_type": "MEMBER_OF_SECTOR",
+          "sign": 1,
+          "weight": 0.82,
+          "confidence": 0.97,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_db9d674ab3da1d326d4f39a2",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:fdx",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.66,
+          "confidence": 0.88,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_ddd72c5b1649f2072222e905",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:cop",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.78,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_de6b0b338af785a05f81f80e",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:ups",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.54,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_de8a7076d30191796ec7ebdf",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:dal",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.5,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_f0adf6b8cb53ab0c960b0588",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "commodity:brent_crude",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.92,
+          "confidence": 0.96,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        }
+      ],
+      "companies": [
+        {
+          "symbol": "UPS",
+          "node_id": "company:ups",
+          "company_name": "United Parcel Service",
+          "exposure": -0.789388,
+          "confidence": 0.990333,
+          "rank": 1,
+          "paths": [
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:ups"
+              ],
+              "edge_ids": [
+                "edge_de6b0b338af785a05f81f80e"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4158,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:ups"
+              ],
+              "edge_ids": [
+                "edge_7c8e3c913f93e71634e96aa5"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4148,
+              "confidence": 0.8008,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:global_trade",
+                "sector:logistics",
+                "company:ups"
+              ],
+              "edge_ids": [
+                "edge_d65d3cc0250e0cbe8fbdf2d8",
+                "edge_d990df9d22bde0ccbba63e3f"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "MEMBER_OF_SECTOR"
+              ],
+              "contribution": -0.239206,
+              "confidence": 0.776776,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "FDX",
+          "node_id": "company:fdx",
+          "company_name": "FedEx",
+          "exposure": -0.776451,
+          "confidence": 0.990333,
+          "rank": 2,
+          "paths": [
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:fdx"
+              ],
+              "edge_ids": [
+                "edge_db9d674ab3da1d326d4f39a2"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4026,
+              "confidence": 0.8008,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:fdx"
+              ],
+              "edge_ids": [
+                "edge_95ece7c028393d19f5dc762b"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4004,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:global_trade",
+                "sector:logistics",
+                "company:fdx"
+              ],
+              "edge_ids": [
+                "edge_d65d3cc0250e0cbe8fbdf2d8",
+                "edge_1cb38cd40c1171f4483084b0"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "MEMBER_OF_SECTOR"
+              ],
+              "contribution": -0.233372,
+              "confidence": 0.776776,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "DAL",
+          "node_id": "company:dal",
+          "company_name": "Delta Air Lines",
+          "exposure": -0.741981,
+          "confidence": 0.998621,
+          "rank": 3,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:dal"
+              ],
+              "edge_ids": [
+                "edge_78790170e20186eaa6d7b876"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.5084,
+              "confidence": 0.819,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:dal"
+              ],
+              "edge_ids": [
+                "edge_de8a7076d30191796ec7ebdf"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.385,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:dal"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_d911836b70da3dcb014cd898"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.346339,
+              "confidence": 0.821184,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "UAL",
+          "node_id": "company:ual",
+          "company_name": "United Airlines",
+          "exposure": -0.726542,
+          "confidence": 0.998621,
+          "rank": 4,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:ual"
+              ],
+              "edge_ids": [
+                "edge_cc10ff8e997e7817bb2549c8"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.492,
+              "confidence": 0.819,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:ual"
+              ],
+              "edge_ids": [
+                "edge_5c04d88ade79c68a6b75c4c9"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.3696,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:ual"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_77a7b5e2ecc238f432b3286e"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.336719,
+              "confidence": 0.821184,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "XOM",
+          "node_id": "company:xom",
+          "company_name": "Exxon Mobil",
+          "exposure": 0.641884,
+          "confidence": 0.995682,
+          "rank": 5,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:xom"
+              ],
+              "edge_ids": [
+                "edge_b3b9b6fd3ee61a127c8cd694"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": 0.6888,
+              "confidence": 0.8645,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:xom"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_c7a77b0c84e7026afc44a990"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.408873,
+              "confidence": 0.82992,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:xom"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_c7a77b0c84e7026afc44a990"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.336301,
+              "confidence": 0.81263,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "CVX",
+          "node_id": "company:cvx",
+          "company_name": "Chevron",
+          "exposure": 0.625634,
+          "confidence": 0.995682,
+          "rank": 6,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:cvx"
+              ],
+              "edge_ids": [
+                "edge_669c5b3cb0fb0025b68bc1d1"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": 0.6642,
+              "confidence": 0.8645,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:cvx"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_0b9b6a6839ec86c15c79fb9a"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.394442,
+              "confidence": 0.82992,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:cvx"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_0b9b6a6839ec86c15c79fb9a"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.324432,
+              "confidence": 0.81263,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "CAT",
+          "node_id": "company:cat",
+          "company_name": "Caterpillar",
+          "exposure": -0.306973,
+          "confidence": 0.7462,
+          "rank": 7,
+          "paths": [
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:cat"
+              ],
+              "edge_ids": [
+                "edge_d20d335e03bcf239acedca72"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.3172,
+              "confidence": 0.7462,
+              "depth": 1
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "UNP",
+          "node_id": "company:unp",
+          "company_name": "Union Pacific",
+          "exposure": -0.295882,
+          "confidence": 0.7462,
+          "rank": 8,
+          "paths": [
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:unp"
+              ],
+              "edge_ids": [
+                "edge_49bd1cdd5e27f1dc03d4f69b"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.305,
+              "confidence": 0.7462,
+              "depth": 1
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "COP",
+          "node_id": "company:cop",
+          "company_name": "ConocoPhillips",
+          "exposure": 0.066497,
+          "confidence": 0.964966,
+          "rank": 9,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:cop"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_ddd72c5b1649f2072222e905"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.375201,
+              "confidence": 0.821184,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:cop"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_ddd72c5b1649f2072222e905"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.308606,
+              "confidence": 0.804076,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "OXY",
+          "node_id": "company:oxy",
+          "company_name": "Occidental Petroleum",
+          "exposure": 0.065647,
+          "confidence": 0.96165,
+          "rank": 10,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:oxy"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_11c7e5f884bb0a15196df641"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.370391,
+              "confidence": 0.812448,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:oxy"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_11c7e5f884bb0a15196df641"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.304649,
+              "confidence": 0.795522,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "EOG",
+          "node_id": "company:eog",
+          "company_name": "EOG Resources",
+          "exposure": 0.063946,
+          "confidence": 0.96165,
+          "rank": 11,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:eog"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_90174a49345eba86cd28d3ee"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.36077,
+              "confidence": 0.812448,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:eog"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_90174a49345eba86cd28d3ee"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.296736,
+              "confidence": 0.795522,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "TTE",
+          "node_id": "company:tte",
+          "company_name": "TotalEnergies",
+          "exposure": 0.059694,
+          "confidence": 0.958184,
+          "rank": 12,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:tte"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_cf8ba8c1efa9242e3347f863"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.336719,
+              "confidence": 0.803712,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:tte"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_cf8ba8c1efa9242e3347f863"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.276954,
+              "confidence": 0.786968,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "AAL",
+          "node_id": "company:aal",
+          "company_name": "American Airlines",
+          "exposure": -0.057992,
+          "confidence": 0.96165,
+          "rank": 13,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:aal"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_d8678aa8e698cbee31c002a9"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.327098,
+              "confidence": 0.812448,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:aal"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_d8678aa8e698cbee31c002a9"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": 0.269041,
+              "confidence": 0.795522,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CONSUMES_COMMODITY"
+        },
+        {
+          "symbol": "LNG",
+          "node_id": "company:lng",
+          "company_name": "Cheniere Energy",
+          "exposure": 0.055439,
+          "confidence": 0.950805,
+          "rank": 14,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:lng"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_ad38cfaaa12b2101234fbcf3"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.312667,
+              "confidence": 0.78624,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:lng"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_ad38cfaaa12b2101234fbcf3"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.257171,
+              "confidence": 0.76986,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "LUV",
+          "node_id": "company:luv",
+          "company_name": "Southwest Airlines",
+          "exposure": -0.053737,
+          "confidence": 0.958184,
+          "rank": 15,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:luv"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_5c0081e92645bb7e39d11850"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.303047,
+              "confidence": 0.803712,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:luv"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_5c0081e92645bb7e39d11850"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": 0.249258,
+              "confidence": 0.786968,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CONSUMES_COMMODITY"
+        }
+      ],
+      "unmapped_channels": [],
+      "diagnostics": {
+        "status": "ok",
+        "channel_count": 4,
+        "unmapped_channel_count": 0
+      }
+    }
+  },
+  {
+    "label": "event exposures",
+    "method": "GET",
+    "path": "/events/evt_mock_hormuz_naval_001/exposures",
+    "status_code": 200,
+    "body": {
+      "event_id": "evt_mock_hormuz_naval_001",
+      "graph_snapshot_id": "gs_940908830291ae1f51d2",
+      "graph_version": "echo-graph-v1",
+      "nodes": [
+        {
+          "id": "channel:energy_prices",
+          "node_type": "channel",
+          "canonical_name": "Energy prices",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "channel:global_trade",
+          "node_type": "channel",
+          "canonical_name": "Global trade",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "channel:oil_supply",
+          "node_type": "channel",
+          "canonical_name": "Oil supply",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "channel:shipping_costs",
+          "node_type": "channel",
+          "canonical_name": "Shipping costs",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        },
+        {
+          "id": "commodity:brent_crude",
+          "node_type": "commodity",
+          "canonical_name": "Brent crude",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {
+            "unit": "barrel"
+          }
+        },
+        {
+          "id": "company:aal",
+          "node_type": "company",
+          "canonical_name": "American Airlines",
+          "symbol": "AAL",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:cat",
+          "node_type": "company",
+          "canonical_name": "Caterpillar",
+          "symbol": "CAT",
+          "external_ids": {},
+          "metadata": {
+            "sector": "industrials"
+          }
+        },
+        {
+          "id": "company:cop",
+          "node_type": "company",
+          "canonical_name": "ConocoPhillips",
+          "symbol": "COP",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:cvx",
+          "node_type": "company",
+          "canonical_name": "Chevron",
+          "symbol": "CVX",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:dal",
+          "node_type": "company",
+          "canonical_name": "Delta Air Lines",
+          "symbol": "DAL",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:eog",
+          "node_type": "company",
+          "canonical_name": "EOG Resources",
+          "symbol": "EOG",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:fdx",
+          "node_type": "company",
+          "canonical_name": "FedEx",
+          "symbol": "FDX",
+          "external_ids": {},
+          "metadata": {
+            "sector": "logistics"
+          }
+        },
+        {
+          "id": "company:lng",
+          "node_type": "company",
+          "canonical_name": "Cheniere Energy",
+          "symbol": "LNG",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:luv",
+          "node_type": "company",
+          "canonical_name": "Southwest Airlines",
+          "symbol": "LUV",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:oxy",
+          "node_type": "company",
+          "canonical_name": "Occidental Petroleum",
+          "symbol": "OXY",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:tte",
+          "node_type": "company",
+          "canonical_name": "TotalEnergies",
+          "symbol": "TTE",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "company:ual",
+          "node_type": "company",
+          "canonical_name": "United Airlines",
+          "symbol": "UAL",
+          "external_ids": {},
+          "metadata": {
+            "sector": "airlines"
+          }
+        },
+        {
+          "id": "company:unp",
+          "node_type": "company",
+          "canonical_name": "Union Pacific",
+          "symbol": "UNP",
+          "external_ids": {},
+          "metadata": {
+            "sector": "logistics"
+          }
+        },
+        {
+          "id": "company:ups",
+          "node_type": "company",
+          "canonical_name": "United Parcel Service",
+          "symbol": "UPS",
+          "external_ids": {},
+          "metadata": {
+            "sector": "logistics"
+          }
+        },
+        {
+          "id": "company:xom",
+          "node_type": "company",
+          "canonical_name": "Exxon Mobil",
+          "symbol": "XOM",
+          "external_ids": {},
+          "metadata": {
+            "sector": "energy"
+          }
+        },
+        {
+          "id": "sector:logistics",
+          "node_type": "sector",
+          "canonical_name": "Logistics",
+          "symbol": null,
+          "external_ids": {},
+          "metadata": {}
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge_0b9b6a6839ec86c15c79fb9a",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:cvx",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.82,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_11c7e5f884bb0a15196df641",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:oxy",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.77,
+          "confidence": 0.93,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_1cb38cd40c1171f4483084b0",
+          "source_node_id": "sector:logistics",
+          "target_node_id": "company:fdx",
+          "relationship_type": "MEMBER_OF_SECTOR",
+          "sign": 1,
+          "weight": 0.8,
+          "confidence": 0.97,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_49bd1cdd5e27f1dc03d4f69b",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:unp",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.5,
+          "confidence": 0.82,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_5c0081e92645bb7e39d11850",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:luv",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.63,
+          "confidence": 0.92,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_5c04d88ade79c68a6b75c4c9",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:ual",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.48,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_669c5b3cb0fb0025b68bc1d1",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:cvx",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.81,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_77a7b5e2ecc238f432b3286e",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:ual",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.7,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_78790170e20186eaa6d7b876",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:dal",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.62,
+          "confidence": 0.9,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_7c8e3c913f93e71634e96aa5",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:ups",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.68,
+          "confidence": 0.88,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_90174a49345eba86cd28d3ee",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:eog",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.75,
+          "confidence": 0.93,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_95ece7c028393d19f5dc762b",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:fdx",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.52,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_ad38cfaaa12b2101234fbcf3",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:lng",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.65,
+          "confidence": 0.9,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_b3b9b6fd3ee61a127c8cd694",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:xom",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.84,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_c7a77b0c84e7026afc44a990",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:xom",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.85,
+          "confidence": 0.95,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_cc10ff8e997e7817bb2549c8",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "company:ual",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.6,
+          "confidence": 0.9,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_cf8ba8c1efa9242e3347f863",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:tte",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.7,
+          "confidence": 0.92,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d20d335e03bcf239acedca72",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:cat",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.52,
+          "confidence": 0.82,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d56421ddb33835223bd41442",
+          "source_node_id": "channel:energy_prices",
+          "target_node_id": "commodity:brent_crude",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.85,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d65d3cc0250e0cbe8fbdf2d8",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "sector:logistics",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.75,
+          "confidence": 0.88,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d8678aa8e698cbee31c002a9",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:aal",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.68,
+          "confidence": 0.93,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d911836b70da3dcb014cd898",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:dal",
+          "relationship_type": "CONSUMES_COMMODITY",
+          "sign": 1,
+          "weight": 0.72,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_d990df9d22bde0ccbba63e3f",
+          "source_node_id": "sector:logistics",
+          "target_node_id": "company:ups",
+          "relationship_type": "MEMBER_OF_SECTOR",
+          "sign": 1,
+          "weight": 0.82,
+          "confidence": 0.97,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_db9d674ab3da1d326d4f39a2",
+          "source_node_id": "channel:global_trade",
+          "target_node_id": "company:fdx",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.66,
+          "confidence": 0.88,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_ddd72c5b1649f2072222e905",
+          "source_node_id": "commodity:brent_crude",
+          "target_node_id": "company:cop",
+          "relationship_type": "PRODUCES_COMMODITY",
+          "sign": -1,
+          "weight": 0.78,
+          "confidence": 0.94,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_de6b0b338af785a05f81f80e",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:ups",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.54,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_de8a7076d30191796ec7ebdf",
+          "source_node_id": "channel:shipping_costs",
+          "target_node_id": "company:dal",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": -1,
+          "weight": 0.5,
+          "confidence": 0.86,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        },
+        {
+          "id": "edge_f0adf6b8cb53ab0c960b0588",
+          "source_node_id": "channel:oil_supply",
+          "target_node_id": "commodity:brent_crude",
+          "relationship_type": "CHANNEL_EXPOSURE",
+          "sign": 1,
+          "weight": 0.92,
+          "confidence": 0.96,
+          "provenance": {
+            "note": "Initial high-liquidity, shock-sensitive universe; replace through a new validated snapshot.",
+            "source": "ECHO curated seed graph",
+            "reference": "backend/data/graph/seed.json",
+            "provenance_type": "MANUAL_CURATED"
+          },
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": null
+        }
+      ],
+      "companies": [
+        {
+          "symbol": "UPS",
+          "node_id": "company:ups",
+          "company_name": "United Parcel Service",
+          "exposure": -0.789388,
+          "confidence": 0.990333,
+          "rank": 1,
+          "paths": [
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:ups"
+              ],
+              "edge_ids": [
+                "edge_de6b0b338af785a05f81f80e"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4158,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:ups"
+              ],
+              "edge_ids": [
+                "edge_7c8e3c913f93e71634e96aa5"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4148,
+              "confidence": 0.8008,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:global_trade",
+                "sector:logistics",
+                "company:ups"
+              ],
+              "edge_ids": [
+                "edge_d65d3cc0250e0cbe8fbdf2d8",
+                "edge_d990df9d22bde0ccbba63e3f"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "MEMBER_OF_SECTOR"
+              ],
+              "contribution": -0.239206,
+              "confidence": 0.776776,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "FDX",
+          "node_id": "company:fdx",
+          "company_name": "FedEx",
+          "exposure": -0.776451,
+          "confidence": 0.990333,
+          "rank": 2,
+          "paths": [
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:fdx"
+              ],
+              "edge_ids": [
+                "edge_db9d674ab3da1d326d4f39a2"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4026,
+              "confidence": 0.8008,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:fdx"
+              ],
+              "edge_ids": [
+                "edge_95ece7c028393d19f5dc762b"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.4004,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:global_trade",
+                "sector:logistics",
+                "company:fdx"
+              ],
+              "edge_ids": [
+                "edge_d65d3cc0250e0cbe8fbdf2d8",
+                "edge_1cb38cd40c1171f4483084b0"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "MEMBER_OF_SECTOR"
+              ],
+              "contribution": -0.233372,
+              "confidence": 0.776776,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "DAL",
+          "node_id": "company:dal",
+          "company_name": "Delta Air Lines",
+          "exposure": -0.741981,
+          "confidence": 0.998621,
+          "rank": 3,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:dal"
+              ],
+              "edge_ids": [
+                "edge_78790170e20186eaa6d7b876"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.5084,
+              "confidence": 0.819,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:dal"
+              ],
+              "edge_ids": [
+                "edge_de8a7076d30191796ec7ebdf"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.385,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:dal"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_d911836b70da3dcb014cd898"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.346339,
+              "confidence": 0.821184,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "UAL",
+          "node_id": "company:ual",
+          "company_name": "United Airlines",
+          "exposure": -0.726542,
+          "confidence": 0.998621,
+          "rank": 4,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:ual"
+              ],
+              "edge_ids": [
+                "edge_cc10ff8e997e7817bb2549c8"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.492,
+              "confidence": 0.819,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:shipping_costs",
+                "company:ual"
+              ],
+              "edge_ids": [
+                "edge_5c04d88ade79c68a6b75c4c9"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.3696,
+              "confidence": 0.7826,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:ual"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_77a7b5e2ecc238f432b3286e"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.336719,
+              "confidence": 0.821184,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "XOM",
+          "node_id": "company:xom",
+          "company_name": "Exxon Mobil",
+          "exposure": 0.641884,
+          "confidence": 0.995682,
+          "rank": 5,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:xom"
+              ],
+              "edge_ids": [
+                "edge_b3b9b6fd3ee61a127c8cd694"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": 0.6888,
+              "confidence": 0.8645,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:xom"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_c7a77b0c84e7026afc44a990"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.408873,
+              "confidence": 0.82992,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:xom"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_c7a77b0c84e7026afc44a990"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.336301,
+              "confidence": 0.81263,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "CVX",
+          "node_id": "company:cvx",
+          "company_name": "Chevron",
+          "exposure": 0.625634,
+          "confidence": 0.995682,
+          "rank": 6,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "company:cvx"
+              ],
+              "edge_ids": [
+                "edge_669c5b3cb0fb0025b68bc1d1"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": 0.6642,
+              "confidence": 0.8645,
+              "depth": 1
+            },
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:cvx"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_0b9b6a6839ec86c15c79fb9a"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.394442,
+              "confidence": 0.82992,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:cvx"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_0b9b6a6839ec86c15c79fb9a"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.324432,
+              "confidence": 0.81263,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "CAT",
+          "node_id": "company:cat",
+          "company_name": "Caterpillar",
+          "exposure": -0.306973,
+          "confidence": 0.7462,
+          "rank": 7,
+          "paths": [
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:cat"
+              ],
+              "edge_ids": [
+                "edge_d20d335e03bcf239acedca72"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.3172,
+              "confidence": 0.7462,
+              "depth": 1
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "UNP",
+          "node_id": "company:unp",
+          "company_name": "Union Pacific",
+          "exposure": -0.295882,
+          "confidence": 0.7462,
+          "rank": 8,
+          "paths": [
+            {
+              "nodes": [
+                "channel:global_trade",
+                "company:unp"
+              ],
+              "edge_ids": [
+                "edge_49bd1cdd5e27f1dc03d4f69b"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE"
+              ],
+              "contribution": -0.305,
+              "confidence": 0.7462,
+              "depth": 1
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CHANNEL_EXPOSURE"
+        },
+        {
+          "symbol": "COP",
+          "node_id": "company:cop",
+          "company_name": "ConocoPhillips",
+          "exposure": 0.066497,
+          "confidence": 0.964966,
+          "rank": 9,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:cop"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_ddd72c5b1649f2072222e905"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.375201,
+              "confidence": 0.821184,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:cop"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_ddd72c5b1649f2072222e905"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.308606,
+              "confidence": 0.804076,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "OXY",
+          "node_id": "company:oxy",
+          "company_name": "Occidental Petroleum",
+          "exposure": 0.065647,
+          "confidence": 0.96165,
+          "rank": 10,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:oxy"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_11c7e5f884bb0a15196df641"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.370391,
+              "confidence": 0.812448,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:oxy"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_11c7e5f884bb0a15196df641"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.304649,
+              "confidence": 0.795522,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "EOG",
+          "node_id": "company:eog",
+          "company_name": "EOG Resources",
+          "exposure": 0.063946,
+          "confidence": 0.96165,
+          "rank": 11,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:eog"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_90174a49345eba86cd28d3ee"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.36077,
+              "confidence": 0.812448,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:eog"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_90174a49345eba86cd28d3ee"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.296736,
+              "confidence": 0.795522,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "TTE",
+          "node_id": "company:tte",
+          "company_name": "TotalEnergies",
+          "exposure": 0.059694,
+          "confidence": 0.958184,
+          "rank": 12,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:tte"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_cf8ba8c1efa9242e3347f863"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.336719,
+              "confidence": 0.803712,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:tte"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_cf8ba8c1efa9242e3347f863"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.276954,
+              "confidence": 0.786968,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "AAL",
+          "node_id": "company:aal",
+          "company_name": "American Airlines",
+          "exposure": -0.057992,
+          "confidence": 0.96165,
+          "rank": 13,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:aal"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_d8678aa8e698cbee31c002a9"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.327098,
+              "confidence": 0.812448,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:aal"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_d8678aa8e698cbee31c002a9"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": 0.269041,
+              "confidence": 0.795522,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CONSUMES_COMMODITY"
+        },
+        {
+          "symbol": "LNG",
+          "node_id": "company:lng",
+          "company_name": "Cheniere Energy",
+          "exposure": 0.055439,
+          "confidence": 0.950805,
+          "rank": 14,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:lng"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_ad38cfaaa12b2101234fbcf3"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": 0.312667,
+              "confidence": 0.78624,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:lng"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_ad38cfaaa12b2101234fbcf3"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "PRODUCES_COMMODITY"
+              ],
+              "contribution": -0.257171,
+              "confidence": 0.76986,
+              "depth": 2
+            }
+          ],
+          "direction": "POSITIVE",
+          "top_reason": "PRODUCES_COMMODITY"
+        },
+        {
+          "symbol": "LUV",
+          "node_id": "company:luv",
+          "company_name": "Southwest Airlines",
+          "exposure": -0.053737,
+          "confidence": 0.958184,
+          "rank": 15,
+          "paths": [
+            {
+              "nodes": [
+                "channel:oil_supply",
+                "commodity:brent_crude",
+                "company:luv"
+              ],
+              "edge_ids": [
+                "edge_f0adf6b8cb53ab0c960b0588",
+                "edge_5c0081e92645bb7e39d11850"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": -0.303047,
+              "confidence": 0.803712,
+              "depth": 2
+            },
+            {
+              "nodes": [
+                "channel:energy_prices",
+                "commodity:brent_crude",
+                "company:luv"
+              ],
+              "edge_ids": [
+                "edge_d56421ddb33835223bd41442",
+                "edge_5c0081e92645bb7e39d11850"
+              ],
+              "relationships": [
+                "CHANNEL_EXPOSURE",
+                "CONSUMES_COMMODITY"
+              ],
+              "contribution": 0.249258,
+              "confidence": 0.786968,
+              "depth": 2
+            }
+          ],
+          "direction": "NEGATIVE",
+          "top_reason": "CONSUMES_COMMODITY"
+        }
+      ],
+      "unmapped_channels": [],
+      "diagnostics": {
+        "status": "ok",
+        "channel_count": 4,
+        "unmapped_channel_count": 0
+      }
+    }
+  },
+  {
+    "label": "event market impact",
+    "method": "GET",
+    "path": "/events/evt_mock_hormuz_naval_001/market-impact",
+    "status_code": 503,
+    "body": {
+      "error": {
+        "code": "graph_snapshot_error",
+        "message": "Requested graph snapshot was created after the realtime cutoff",
+        "request_id": "8d9aefa626d24974904adb9b31f97784"
+      }
+    }
+  },
+  {
+    "label": "cause investigation",
+    "method": "POST",
+    "path": "/investigations/market-shock/evt_mock_hormuz_naval_001",
+    "status_code": 503,
+    "body": {
+      "error": {
+        "code": "cause_dependency_error",
+        "message": "Cause investigation requires a MARKET market_shock event",
+        "request_id": "4a4a0acb86d445229bb3fca5b46138c4"
+      }
+    }
+  },
+  {
+    "label": "forecast preview",
+    "method": "POST",
+    "path": "/forecasts/preview",
+    "status_code": 200,
+    "body": {
+      "event_id": "evt_mock_hormuz_naval_001",
+      "symbol": "XOM",
+      "issued_at": "2026-09-21T00:51:34.012671Z",
+      "data_cutoff_at": "2026-09-21T00:51:34.012671Z",
+      "graph_snapshot_id": "gs_940908830291ae1f51d2",
+      "model_version": "unavailable",
+      "feature_version": "echo-features-v1",
+      "feature_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "model_artifact_hash": null,
+      "horizons": {},
+      "recommended_horizon": null,
+      "information_half_life": null,
+      "model_status": "FORECAST_UNAVAILABLE",
+      "unavailable_reason": "future_graph_snapshot",
+      "diagnostics": {}
+    }
+  },
+  {
+    "label": "backtest create",
+    "method": "POST",
+    "path": "/backtests",
+    "status_code": 201,
+    "body": {
+      "run_id": "0e4a33a922f147aefc17",
+      "strategy_version": "echo-rp-v1",
+      "config_hash": "128191d8304211045b29cb8b7dde187286242428f0e68b5e1e99efe9b06b5602",
+      "dataset_hash": "5b36eef98ef447b0cd283f36792ae784954fc62963e75175ae06fbcb48997a66",
+      "split": "TEST",
+      "mode": "HISTORICAL_REPLAY",
+      "metrics": {
+        "status": "INSUFFICIENT_DATA",
+        "total_return": 0.012902518188428136,
+        "annualized_return": null,
+        "sharpe": null,
+        "sortino": null,
+        "max_drawdown": 0.0021815465195299476,
+        "calmar": null,
+        "hit_rate": 0.8333333333333334,
+        "profit_factor": 3.0542058712667557,
+        "average_trade": 0.0035663052986256985,
+        "median_trade": 0.0062252001029810804,
+        "average_winner": 0.006362885473640768,
+        "average_loser": -0.010416595576449651,
+        "payoff_ratio": 0.6108411742533512,
+        "turnover": 3.617779983244448,
+        "trades": 18,
+        "trades_per_week": 7.411764705882353,
+        "average_holding_days": 0.9993055555555556,
+        "gross_exposure": 0.20098777684691377,
+        "net_exposure": 0.06701709830752534,
+        "long_trades": 12,
+        "short_trades": 6
+      },
+      "artifact_path": "/home/923873155/ECHO - Market Analysis/artifacts/backtests/0e4a33a922f147aefc17"
+    }
+  },
+  {
+    "label": "backtest research",
+    "method": "GET",
+    "path": "/backtests/research",
+    "status_code": 200,
+    "body": {
+      "trials_count": 14,
+      "families": {
+        "S0_BUY_HOLD_SPY": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "S1_SIMPLE_MOMENTUM": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "S2_MARKET_SHOCK_ONLY": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "S3_GRAPH_EXPOSURE": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "S4_GRAPH_ABSORPTION": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "S5_GRAPH_ABSORPTION_CONFIRMATION": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "S6_FULL_ECHO": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        }
+      },
+      "ablations": {
+        "FULL_MINUS_GRAPH": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "FULL_MINUS_ABSORPTION": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "FULL_MINUS_CONFIRMATION": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "FULL_MINUS_HEDGING": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        }
+      },
+      "robustness": {
+        "COST_1X": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.012902518188428136,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0021815465195299476,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 3.0542058712667557,
+          "average_trade": 0.0035663052986256985,
+          "median_trade": 0.0062252001029810804,
+          "average_winner": 0.006362885473640768,
+          "average_loser": -0.010416595576449651,
+          "payoff_ratio": 0.6108411742533512,
+          "turnover": 3.617779983244448,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20098777684691377,
+          "net_exposure": 0.06701709830752534,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "COST_2X": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": 0.005972539806228916,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.0025654676620324606,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 1.8066143788305085,
+          "average_trade": 0.0016583138868601513,
+          "median_trade": 0.0043156684437361415,
+          "average_winner": 0.004457049799126458,
+          "average_loser": -0.01233536567447138,
+          "payoff_ratio": 0.3613228757661017,
+          "turnover": 3.6060431322424362,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.20033572956902426,
+          "net_exposure": 0.0667486705717749,
+          "long_trades": 12,
+          "short_trades": 6
+        },
+        "COST_3X": {
+          "status": "INSUFFICIENT_DATA",
+          "total_return": -0.0009092236709268287,
+          "annualized_return": null,
+          "sharpe": null,
+          "sortino": null,
+          "max_drawdown": 0.003071766157219508,
+          "calmar": null,
+          "hit_rate": 0.8333333333333334,
+          "profit_factor": 0.895325354991514,
+          "average_trade": -0.0002487248031145166,
+          "median_trade": 0.002408997087577676,
+          "average_winner": 0.002552934831073701,
+          "average_loser": -0.014257022974055603,
+          "payoff_ratio": 0.17906507099830282,
+          "turnover": 3.594358405636996,
+          "trades": 18,
+          "trades_per_week": 7.411764705882353,
+          "average_holding_days": 0.9993055555555556,
+          "gross_exposure": 0.19968657809094423,
+          "net_exposure": 0.06648148725299158,
+          "long_trades": 12,
+          "short_trades": 6
+        }
+      }
+    }
+  }
+]

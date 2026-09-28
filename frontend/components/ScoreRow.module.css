@@ -1,0 +1,40 @@
+/* Heuristic score readouts for world events: bucket chip + plain numbers, never percentages. */
+.readout {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+}
+
+.bucket {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--text-dim);
+}
+.high {
+  color: var(--neg);
+  border-color: var(--neg);
+}
+.elevated {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.moderate {
+  color: var(--text);
+}
+.low {
+  color: var(--text-faint);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 6px 0 0;
+}

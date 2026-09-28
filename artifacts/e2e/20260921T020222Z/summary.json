@@ -1,0 +1,62 @@
+{
+  "run_id": "20260921T020222Z",
+  "mode": "replay",
+  "api_base": "http://127.0.0.1:8110",
+  "web_base": "http://127.0.0.1:3110",
+  "api_total": 13,
+  "api_ok": 13,
+  "web_total": 6,
+  "web_ok": 6,
+  "api_failures": [],
+  "web_failures": [],
+  "deep_domain_total": 9,
+  "deep_domain_ok": 7,
+  "deep_domain_failures": [
+    {
+      "label": "event market impact",
+      "method": "GET",
+      "path": "/events/evt_mock_hormuz_naval_001/market-impact",
+      "status_code": 503,
+      "body": {
+        "error": {
+          "code": "graph_snapshot_error",
+          "message": "Requested graph snapshot was created after the realtime cutoff",
+          "request_id": "8d9aefa626d24974904adb9b31f97784"
+        }
+      }
+    },
+    {
+      "label": "cause investigation",
+      "method": "POST",
+      "path": "/investigations/market-shock/evt_mock_hormuz_naval_001",
+      "status_code": 503,
+      "body": {
+        "error": {
+          "code": "cause_dependency_error",
+          "message": "Cause investigation requires a MARKET market_shock event",
+          "request_id": "4a4a0acb86d445229bb3fca5b46138c4"
+        }
+      }
+    }
+  ],
+  "corrected_domain_total": 9,
+  "corrected_domain_ok": 8,
+  "corrected_domain_failures": [
+    {
+      "label": "world event market impact without forced snapshot",
+      "method": "GET",
+      "path": "/events/evt_mock_hormuz_naval_001/market-impact",
+      "status_code": 503,
+      "body": {
+        "error": {
+          "code": "cause_dependency_error",
+          "message": "No graph snapshot is available at the investigation cutoff",
+          "request_id": "4f8e9dcc79a84ab7a52af6c3731970da"
+        }
+      }
+    }
+  ],
+  "overall": "PASS_WITH_EXPECTED_DATA_GUARD",
+  "browser_automation": "NOT_RUN",
+  "browser_automation_reason": "Preinstalled Chromium could not start because libasound.so.2 is unavailable; HTTP-rendered Next.js route evidence passed."
+}

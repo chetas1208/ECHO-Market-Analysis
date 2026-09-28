@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 24960,
+    "has_echo_brand": true,
+    "has_next_payload": true,
+    "title_fragment": "Dashboard"
+  },
+  {
+    "path": "/events",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 22887,
+    "has_echo_brand": true,
+    "has_next_payload": true,
+    "title_fragment": "Events \u00b7 ECHO"
+  },
+  {
+    "path": "/graph",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 20979,
+    "has_echo_brand": true,
+    "has_next_payload": true,
+    "title_fragment": "Graph \u00b7 ECHO"
+  },
+  {
+    "path": "/forecasts",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 22106,
+    "has_echo_brand": true,
+    "has_next_payload": true,
+    "title_fragment": "Forecasts \u00b7 ECHO"
+  },
+  {
+    "path": "/strategy",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 20438,
+    "has_echo_brand": true,
+    "has_next_payload": true,
+    "title_fragment": "Strategy \u00b7 ECHO"
+  },
+  {
+    "path": "/ops",
+    "status_code": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 20968,
+    "has_echo_brand": true,
+    "has_next_payload": true,
+    "title_fragment": "Operations \u00b7 ECHO"
+  }
+]

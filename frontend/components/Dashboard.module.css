@@ -1,0 +1,206 @@
+.page {
+  --dashboard-gap: 14px;
+  min-height: 0;
+}
+
+.page :global(.page-head--dashboard) {
+  position: relative;
+}
+
+.page :global(.page-head--dashboard)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 120px;
+  height: 1px;
+  background: #24d7f0;
+}
+
+.page :global(.metric-grid),
+.page :global(.dashboard-grid) {
+  gap: var(--dashboard-gap);
+}
+
+.page :global(.metric) {
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.page :global(.metric:hover) {
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+
+.page :global(.panel) {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.page :global(.live-panel) {
+  border-top: 2px solid #24d7f0;
+}
+
+.page :global(.panel--map) {
+  border-top: 2px solid var(--purple);
+}
+
+.page :global(.opportunity) {
+  border-top: 2px solid var(--warning);
+}
+
+/* Density (UI.md 7/9): tighter chrome so the first screen carries the whole state of the world. */
+@media (min-width: 701px) {
+  .page :global(.page-head) {
+    margin-bottom: 12px;
+    padding: 14px 0 12px;
+  }
+
+  .page :global(.page-head__title) {
+    font-size: 22px;
+  }
+
+  .page :global(.page-head__lead) {
+    margin-top: 2px;
+  }
+
+  .page :global(.metric-grid) {
+    margin-bottom: var(--dashboard-gap);
+  }
+
+  .page :global(.metric) {
+    min-height: 74px;
+    padding: 10px 14px;
+  }
+
+  .page :global(.metric strong) {
+    margin-top: 4px;
+    font-size: 23px;
+  }
+
+  .page :global(.panel) {
+    padding: 14px;
+  }
+
+  .page :global(.panel__head) {
+    margin-bottom: 10px;
+  }
+}
+
+/* Top row: equal-height panels; the map and the events list absorb the height. */
+.page :global(.panel--map) {
+  display: flex;
+  flex-direction: column;
+}
+
+.page :global(.shock-map) {
+  flex: 1;
+  min-height: 170px;
+}
+
+.page :global(.dashboard-events a) {
+  padding: 8px 0;
+}
+
+.page :global(.opportunity__asset) {
+  margin: 0 0 8px;
+}
+
+.page :global(.opportunity__title) {
+  min-height: 0;
+  margin: 0 0 8px;
+}
+
+.page :global(.unavailable-panel) {
+  min-height: 0;
+  padding: 10px 12px;
+}
+
+.page :global(.opportunity__grid) {
+  margin-top: 10px;
+}
+
+.page :global(.panel__actions) {
+  margin-top: 12px;
+}
+
+.page :global(.live-panel) {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.page :global(.live-panel .dashboard-events) {
+  overflow-y: auto;
+}
+
+/* Bottom strip: placeholders stay compact until real evaluation data exists. */
+.page :global(.accuracy__hero) {
+  padding-bottom: 8px;
+}
+
+.page :global(.accuracy__rows) {
+  padding: 8px 0 4px;
+}
+
+.page :global(.ledger-empty) {
+  padding: 12px;
+}
+
+/* Events loading/error state spans the first grid row (the Market region keeps its own slot). */
+.eventsState {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+/* Row 3: Accuracy (column 1) beside the ledger preview (columns 2-3). */
+.page :global(.ledger-preview) {
+  grid-column: 2 / -1;
+}
+
+@media (max-width: 1100px) {
+  .page :global(.ledger-preview) {
+    grid-column: auto;
+  }
+
+  .page :global(.metric-grid),
+  .page :global(.dashboard-grid) {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .page :global(.shock-map) {
+    min-height: 140px;
+  }
+
+  .page :global(.metric) {
+    min-height: 78px;
+    padding: 10px 12px;
+  }
+
+  .page :global(.panel) {
+    padding: 14px;
+  }
+
+  .page :global(.panel__head) {
+    margin-bottom: 10px;
+  }
+
+  .eventsState {
+    order: 1;
+  }
+
+  .page :global(.market-region) {
+    order: 4;
+  }
+
+  .page :global(.accuracy) {
+    order: 5;
+  }
+
+  .page :global(.ledger-preview) {
+    order: 6;
+  }
+
+  .page :global(.page-head--dashboard)::after {
+    width: 72px;
+  }
+}

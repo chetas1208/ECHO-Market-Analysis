@@ -1,0 +1,39 @@
+.page {
+  min-height: 0;
+}
+
+.page :global(.workspace-placeholder) {
+  position: relative;
+  overflow: hidden;
+  max-width: 760px;
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.14);
+}
+
+.page :global(.workspace-placeholder)::before,
+.page :global(.workspace-placeholder)::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid rgba(36, 215, 240, 0.14);
+  border-radius: 50%;
+}
+
+.page :global(.workspace-placeholder)::before {
+  width: 420px;
+  height: 420px;
+  top: -250px;
+  right: -180px;
+}
+
+.page :global(.workspace-placeholder)::after {
+  width: 260px;
+  height: 260px;
+  bottom: -170px;
+  left: -100px;
+}
+
+.page :global(.workspace-placeholder__mark) {
+  position: relative;
+  z-index: 1;
+}

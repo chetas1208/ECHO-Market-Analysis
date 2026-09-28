@@ -1,0 +1,136 @@
+.page {
+  min-height: 0;
+}
+
+.page :global(.page-head) {
+  border-bottom-color: var(--line-strong);
+}
+
+.page :global(.event-list) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.page :global(.event-list > li:first-child) {
+  grid-column: span 2;
+}
+
+.page :global(.card) {
+  height: 100%;
+  border-radius: 12px;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.page :global(.card:hover) {
+  background: #0e1d2b;
+  border-color: var(--line-strong);
+}
+
+.page :global(.card:first-child) {
+  border-top: 2px solid #24d7f0;
+}
+
+@media (max-width: 760px) {
+  .page :global(.event-list) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page :global(.event-list > li:first-child) {
+    width: 100%;
+  }
+}
+
+.filters {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0 auto 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.filtersRow {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 8px 20px;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+  min-width: 0;
+}
+
+.filterGroup .filters {
+  margin: 0;
+}
+
+.select {
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  color: var(--text);
+  background: var(--bg-raised);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.filterBtn {
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  color: var(--text-dim);
+  background: var(--bg-raised);
+  border: 0;
+  border-right: 1px solid var(--line-strong);
+  cursor: pointer;
+}
+
+.filterBtn:last-child {
+  border-right: 0;
+}
+
+.filterBtn:hover {
+  color: var(--text);
+}
+
+.filterBtn[aria-pressed="true"] {
+  color: var(--text);
+  background: var(--bg-inset);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.filterBtn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.stale {
+  max-width: 1500px;
+  margin: 0 auto 10px;
+  font-size: 11.5px;
+  color: var(--warning);
+}

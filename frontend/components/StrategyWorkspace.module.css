@@ -1,0 +1,34 @@
+.page { display: grid; gap: 18px; min-width: 0; }
+.banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 14px; border: 1px solid rgba(36,215,240,.24); background: rgba(8,20,31,.68); color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.mode { color: #061319; background: var(--accent); padding: 4px 7px; font-weight: 800; }
+.hash { margin-left: auto; color: var(--accent); font-family: monospace; }
+.heroGrid, .lowerGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; }
+.hero, .config, .panel, .state { border: 1px solid rgba(130,160,180,.18); background: linear-gradient(135deg, rgba(14,31,44,.92), rgba(7,16,26,.96)); box-shadow: 0 20px 60px rgba(0,0,0,.16); }
+.hero { padding: 30px; position: relative; overflow: hidden; }
+.hero::after { content: "RP"; position: absolute; right: 24px; bottom: -22px; color: rgba(36,215,240,.08); font-size: 140px; font-weight: 900; }
+.hero h2, .panel h2 { margin: 8px 0; color: #eef8fb; font-size: clamp(20px, 3vw, 29px); }
+.hero em { color: var(--accent); font-style: normal; }
+.hero p, .note, .state p { max-width: 600px; color: var(--muted); line-height: 1.6; }
+.kicker { color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: .15em; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+.tags span, .reason { border: 1px solid rgba(130,160,180,.24); padding: 5px 7px; color: #b9ced6; font-size: 10px; letter-spacing: .08em; }
+.config { padding: 24px; }
+.config dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; margin: 18px 0 0; }
+.config dl div { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid rgba(130,160,180,.13); padding: 10px 0; }
+.config dt { color: var(--muted); font-size: 12px; } .config dd { margin: 0; color: #e8f6f8; font-size: 12px; font-weight: 700; }
+.metricGrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.metric { padding: 15px; border: 1px solid rgba(130,160,180,.16); background: rgba(10,25,37,.8); } .metric span { display: block; color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; } .metric strong { display: block; margin-top: 8px; color: #f0fbfc; font-size: 21px; }
+.panel { padding: 22px; min-width: 0; } .panelHeader { display: flex; justify-content: space-between; gap: 14px; align-items: end; } .panelHeader h2 { font-size: 20px; } .subtle { color: var(--muted); font-size: 11px; }
+.curve { position: relative; height: 150px; margin-top: 18px; border-left: 1px solid rgba(130,160,180,.24); border-bottom: 1px solid rgba(130,160,180,.24); background: repeating-linear-gradient(to bottom, transparent 0 36px, rgba(130,160,180,.1) 37px); } .curveLine { position: absolute; left: 0; right: 0; bottom: 46%; height: 2px; background: var(--accent); box-shadow: 0 0 18px rgba(36,215,240,.8); transform: translateY(var(--curve-rise)); } .axis, .axisBottom { position: absolute; left: 8px; color: var(--muted); font-size: 10px; } .axis { top: 7px; } .axisBottom { bottom: 7px; }
+.tableWrap { overflow-x: auto; margin-top: 14px; } .tableWrap :global(table) { width: 100%; border-collapse: collapse; min-width: 760px; } .tableWrap :global(th), .tableWrap :global(td) { padding: 11px 10px; border-bottom: 1px solid rgba(130,160,180,.13); text-align: left; color: #c8d9df; font-size: 12px; white-space: nowrap; } .tableWrap :global(th) { color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; } .tableWrap :global(td small) { display: block; color: var(--muted); margin-top: 3px; } .long, .positive { color: #52e0a7; } .short, .negative { color: #ff8e9b; } .reason { color: var(--muted); font-size: 9px; }
+.state { padding: 28px; color: #eef8fb; } .state strong { font-size: 17px; } .state :global(code) { color: var(--accent); }
+.executionGrid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; }
+.executionRows { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 18px 0; }
+.executionRows div { border: 1px solid rgba(130,160,180,.13); padding: 10px; } .executionRows span { display: block; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; } .executionRows strong { display: block; margin-top: 7px; color: #eaf9fb; font-size: 12px; }
+.liveBadge, .danger { padding: 5px 8px; border: 1px solid rgba(82,224,167,.4); color: #52e0a7; font-size: 10px; letter-spacing: .1em; } .danger { border-color: rgba(255,142,155,.5); color: #ff8e9b; }
+.copyButton { border: 1px solid rgba(36,215,240,.4); background: transparent; color: var(--accent); padding: 7px 9px; cursor: pointer; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.comparison { margin-top: 15px; overflow-x: auto; } .comparisonRow { display: grid; grid-template-columns: minmax(220px, 1fr) 90px 80px 80px 90px 140px; gap: 12px; min-width: 760px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(130,160,180,.12); color: #c8d9df; font-size: 12px; } .comparisonRow strong { color: #eef8fb; } .comparisonRow small { color: var(--muted); }
+.timeline { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-top: 18px; } .timelineStep { min-height: 78px; padding: 11px; border-top: 2px solid var(--accent); background: rgba(10,25,37,.8); } .timelineStep span { display: block; color: var(--accent); font: 11px monospace; } .timelineStep strong { display: block; margin-top: 17px; color: #e9f7f9; font-size: 11px; line-height: 1.35; }
+@media (max-width: 900px) { .heroGrid, .lowerGrid { grid-template-columns: 1fr; } .metricGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) { .executionGrid { grid-template-columns: 1fr; } .timeline { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 520px) { .metricGrid { grid-template-columns: repeat(2, 1fr); } .hero, .config, .panel { padding: 18px; } .config dl { grid-template-columns: 1fr; } .hash { margin-left: 0; } .executionRows { grid-template-columns: repeat(2, 1fr); } .timeline { grid-template-columns: repeat(2, 1fr); } }

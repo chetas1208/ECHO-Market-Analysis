@@ -1,0 +1,45 @@
+/* Market-shock event language: distinct badge, direction arrow, ticker chips, shock score. */
+.shockBadge :global(.badge) {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.shockLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 0;
+}
+
+.arrow {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+}
+.up {
+  color: var(--pos);
+}
+.down {
+  color: var(--neg);
+}
+.flat {
+  color: var(--text-dim);
+}
+
+.tickers {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}

@@ -1,0 +1,8 @@
+{
+  "package": "echo-demo-v1",
+  "mode": "REPLAY",
+  "execution": "DISABLED",
+  "source": "artifacts/demo/scenarios.json",
+  "reset": "make demo-reset",
+  "launch": "make demo"
+}
